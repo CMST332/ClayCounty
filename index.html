@@ -7,7 +7,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> <!--Jquery-->
-
+  <script src="./script.js"></script>
 
   <!--bootsrap stylesheet-->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -15,9 +15,17 @@
   <!--fontawesome stylesheet-->
     <script src="https://kit.fontawesome.com/9703492d18.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-qjZLwYYZNMJh+sZO5XT5sw5zE+R7XlGflvlVRh7VHPeB+uFqVZdW38pg8CDvYRL6ckPf2XBNyHr8r6v0Vo0SOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <!--share button stylesheet-->
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=638e3d93b92caa0012f80c27&product=inline-share-buttons' async='async'></script>
-  
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -25,21 +33,41 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="2siY0Bk5"></script>
   <!---header--->
   <header>
-   <div class="navb">
-     <a href="/"><img src='IMG/logo.jpg' alt="Clay County Kansas Historical Society Logo" class="mainLogo"/></a>
-   </div>     
-      <nav class="links">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="https://www.claycomuseum.com/events">Events</a></li>
-        <li><a href="https://www.claycomuseum.com/timeline">County History</a></li>
-        <li><a href="https://www.claycomuseum.com/genealogy-and-research">What Do We Offer</a></li>
-        <li><a href="https://www.claycomuseum.com/staff">About</a></li>
-        <li><a href="https://www.claycomuseum.com/contact">Contact</a></li>
-        <li><a href="https://www.claycomuseum.com/volunteer">Volunteer</a></li>
-        <li><a href="https://www.claycomuseum.com/donate">Donate</a></li>
-       </ul>
-      </nav>
+ 
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+      <a href="/"><img src='IMG/logo.webp' alt="Clay County Kansas Historical Society Logo" class="mainLogo" width="161px" height="161px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.claycomuseum.com/events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.claycomuseum.com/timeline">County History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.claycomuseum.com/genealogy-and-research">What Do We Offer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.claycomuseum.com/staff">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.claycomuseum.com/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.claycomuseum.com/volunteer">Volunteer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.claycomuseum.com/donate">Donate</a>
+          </li>
+         </ul> 
+      </div>
+    </nav>
   </header>
   
   <!--- Body --->
@@ -58,8 +86,8 @@
   <!-- Search Bar -->
   <div class="container-fluid">
   
-    <div class="row">
-    <div class="col-md-7 search"> 
+    <div>
+    <div class="search"> 
       
     <form method="get" action="" id="foo" class="text-center">
       Search for records given a last name.<br>
@@ -108,13 +136,1130 @@
   </div> <!---end container--->
 
     <!-- Map -->
-    <div>
-      <div class="imageDisplay">
-        <canvas id="canvas_front" height="960" width="713" class="highlightMap"></canvas>
+    <div id="map" class="map">
+      <div id="topo">
+      <div id="borderLine"><img id="bLine" src="./IMG/img/clayborder.png"></div>
+      <table id="mapDivide">
+          <tbody>
+          <tr>
+              <th id="map1" onclick="map1()"><img src="./IMG/img/smallSize/1.jpg"></th>
+              <th id="map2" onclick="map2()"><img src="./IMG/img/smallSize/2.jpg"></th>
+              <th id="map3" onclick="map3()"><img src="./IMG/img/smallSize/3.jpg"></th>
+              <th id="map4" onclick="map4()"><img src="./IMG/img/smallSize/4.jpg"></th>
+          </tr>
+
+          <tr>
+              <th id="map5" onclick="map5()"><img src="./IMG/img/smallSize/5.jpg"></th>
+              <th id="map6" onclick="map6()"><img src="./IMG/img/smallSize/6.jpg"></th>
+              <th id="map7" onclick="map7()"><img src="./IMG/img/smallSize/7.jpg"></th>
+              <th id="map8" onclick="map8()"><img src="./IMG/img/smallSize/8.jpg"></th>
+          </tr>
+
+          <tr>
+              <th id="map9" onclick="map9()"><img src="./IMG/img/smallSize/9.jpg"></th>
+              <th id="map10" onclick="map10()"><img src="./IMG/img/smallSize/10.jpg"></th>
+              <th id="map11" onclick="map11()"><img src="./IMG/img/smallSize/11.jpg"></th>
+              <th id="map12" onclick="map12()"><img src="./IMG/img/smallSize/12.jpg"></th>
+          </tr>
+
+          <tr>
+              <th id="map13" onclick="map13()"><img src="./IMG/img/smallSize/13.jpg"></th>
+              <th id="map14" onclick="map14()"><img src="./IMG/img/smallSize/14.jpg"></th>
+              <th id="map15" onclick="map15()"><img src="./IMG/img/smallSize/15.jpg"></th>
+              <th id="map16" onclick="map16()"><img src="./IMG/img/smallSize/16.jpg"></th>
+          </tr>
+
+          <tr>
+              <th id="map17" onclick="map17()"><img src="./IMG/img/smallSize/17.jpg"></th>
+              <th id="map18" onclick="map18()"><img src="./IMG/img/smallSize/18.jpg"></th>
+              <th id="map19" onclick="map19()"><img src="./IMG/img/smallSize/19.jpg"></th>
+              <th id="map20" onclick="map20()"><img src="./IMG/img/smallSize/20.jpg"></th>
+          </tr>
+          </tbody>
+      </table>
       </div>
-    </div> <!---end col---->
-    <hr>
-  </div> <!---end row---->
+      <div id="bigMap">
+          <div id="s1" style="display: none;">
+              <img id="bmap1" src="./IMG/img/1.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th onclick="b1map6()">6</th>
+                  <th onclick="b1map5()">5</th>
+                  <th onclick="b1map4()">4</th>
+                  <th onclick="b1map3()">3</th>
+                  <th onclick="b1map2()">2</th>
+                  <th onclick="b1map1()">1</th>
+              </tr>
+              <tr>
+                  <th onclick="b1map7()">7</th>
+                  <th onclick="b1ma8()">8</th>
+                  <th onclick="b1map9()">9</th>
+                  <th onclick="b1map10()">10</th>
+                  <th onclick="b1map11()">11</th>
+                  <th onclick="b1map12()">12</th>
+              </tr>
+              <tr>
+                  <th onclick="b1map18()">18</th>
+                  <th onclick="b1map17()">17</th>
+                  <th onclick="b1map16()">16</th>
+                  <th onclick="b1map15()">15</th>
+                  <th onclick="b1map14()">14</th>
+                  <th onclick="b1map13()">13</th>
+              </tr>
+              <tr>
+                  <th onclick="b1map19()">19</th>
+                  <th onclick="b1map20()">20</th>
+                  <th onclick="b1map21()">21</th>
+                  <th onclick="b1map22()">22</th>
+                  <th onclick="b1map23()">23</th>
+                  <th onclick="b1map24()">24</th>
+              </tr>
+              <tr>
+                  <th onclick="b1map25()">30</th>
+                  <th onclick="b1map26()">29</th>
+                  <th onclick="b1map27()">28</th>
+                  <th onclick="b1map28()">27</th>
+                  <th onclick="b1map29()">26</th>
+                  <th onclick="b1map30()">25</th>
+              </tr>
+              <tr>
+                  <th onclick="b1map31()">31</th>
+                  <th onclick="b1map32()">32</th>
+                  <th onclick="b1map33()">33</th>
+                  <th onclick="b1map34()">34</th>
+                  <th onclick="b1map35()">35</th>
+                  <th onclick="b1map36()">36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s2" style="display: none;">
+              <img id="bmap2" src="./IMG/img/2.jpg">
+              <table class="mapSection">
+                  <tr>
+                      <th>6</th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                  </tr>
+                  <tr>
+                      <th>7</th>
+                      <th>8</th>
+                      <th>9</th>
+                      <th>10</th>
+                      <th>11</th>
+                      <th>12</th>
+                  </tr>
+                  <tr>
+                      <th>18</th>
+                      <th>17</th>
+                      <th>16</th>
+                      <th>15</th>
+                      <th>14</th>
+                      <th>13</th>
+                  </tr>
+                  <tr>
+                      <th>19</th>
+                      <th>20</th>
+                      <th>21</th>
+                      <th>22</th>
+                      <th>23</th>
+                      <th>24</th>
+                  </tr>
+                  <tr>
+                      <th>30</th>
+                      <th>29</th>
+                      <th>28</th>
+                      <th>27</th>
+                      <th>26</th>
+                      <th>25</th>
+                  </tr>
+                  <tr>
+                      <th>31</th>
+                      <th>32</th>
+                      <th>33</th>
+                      <th>34</th>
+                      <th>35</th>
+                      <th>36</th>
+                  </tr>
+              </table>
+          </div>
+
+          <div id="s3" style="display: none;">
+              <img id="bmap3" src="./IMG/img/3.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s4" style="display: none;">
+              <img id="bmap4" src="./IMG/img/4.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s5" style="display: none;">
+              <img id="bmap5" src="./IMG/img/5.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s6" style="display: none;">
+              <img id="bmap6" src="./IMG/img/6.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+          
+          <div id="s7" style="display: none;">
+              <img id="bmap7" src="./IMG/img/7.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s8" style="display: none;">
+              <img id="bmap8" src="./IMG/img/8.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s9" style="display: none;">
+              <img id="bmap9" src="./IMG/img/9.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s10" style="display: none;">
+              <img id="bmap10" src="./IMG/img/10.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s11" style="display: none;">
+              <img id="bmap11" src="./IMG/img/11.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s12" style="display: none;">
+              <img id="bmap12" src="./IMG/img/12.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s13" style="display: none;">
+              <img id="bmap13" src="./IMG/img/13.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s14" style="display: none;">
+              <img id="bmap14" src="./IMG/img/14.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s15" style="display: none;">
+              <img id="bmap15" src="./IMG/img/15.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s16" style="display: none;">
+              <img id="bmap16" src="./IMG/img/16.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s17" style="display: none;">
+              <img id="bmap17" src="./IMG/img/17.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s18" style="display: none;">
+              <img id="bmap18" src="./IMG/img/18.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s19" style="display: none;">
+              <img id="bmap19" src="./IMG/img/19.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+
+          <div id="s20" style="display: none;">
+              <img id="bmap20" src="./IMG/img/20.jpg">
+              <table class="mapSection">
+              <tr>
+                  <th>6</th>
+                  <th>5</th>
+                  <th>4</th>
+                  <th>3</th>
+                  <th>2</th>
+                  <th>1</th>
+              </tr>
+              <tr>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+              </tr>
+              <tr>
+                  <th>18</th>
+                  <th>17</th>
+                  <th>16</th>
+                  <th>15</th>
+                  <th>14</th>
+                  <th>13</th>
+              </tr>
+              <tr>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+              </tr>
+              <tr>
+                  <th>30</th>
+                  <th>29</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>26</th>
+                  <th>25</th>
+              </tr>
+              <tr>
+                  <th>31</th>
+                  <th>32</th>
+                  <th>33</th>
+                  <th>34</th>
+                  <th>35</th>
+                  <th>36</th>
+              </tr>
+              </table>
+          </div>
+      </div>
+  </div>
 
 
 
