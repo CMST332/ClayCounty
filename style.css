@@ -143,14 +143,12 @@ a.facebook {
 }
 
 #mapDivide th {
-display: inline-block;
+  display: inline-block;
   border-spacing: 0;
   border-collapse: collapse;
   margin: 0;
   padding: 0;
-margin-bottom: -7.5px;
 }
-
 
 #mapDivide img {
   width: 10vw;
@@ -178,7 +176,7 @@ margin-bottom: -7.5px;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 6.3px);
+  height: 100%;
   z-index: 2;
   transition: background-color 0.5s;
 }
