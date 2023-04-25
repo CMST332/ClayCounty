@@ -21,11 +21,9 @@ $("#foo").submit(function(event){
         // Log a message to the console
         console.log("Hooray, it worked!");
         console.log(response);
-        canSet();
         if (response.length >= 1) {
             editTable(response);
             for (i = 0; i < response.length; i++) {
-            runHigh(response[i].RGE, response[i].TSP, response[i].SEC);
             }
         } else {
            failTable(1);
