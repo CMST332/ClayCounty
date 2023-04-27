@@ -14,7 +14,7 @@ $("#foo").submit(function(event){
     request = $.ajax({ //sends request
         url: "NameCCLR.php",
         type: "get",
-        data: query
+        data: serializedData
     });
     // Callback handler that will be called on success
     request.done(function (response){
