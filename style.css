@@ -143,16 +143,14 @@ a.facebook {
   margin-bottom: 40px;
 }
 
-/*
-table, th {
+
+.mapDivide, th {
 display: inline-block;
   border-spacing: 0;
   border-collapse: collapse;
   margin: 0;
   padding: 0;
-margin-bottom: -7.5px;
 }
-*/
 
 #mapDivide img {
   width: 10vw;
@@ -180,7 +178,7 @@ margin-bottom: -7.5px;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 6.3px);
+  height: 100%;
   z-index: 2;
   transition: background-color 0.5s;
 }
@@ -190,7 +188,7 @@ margin-bottom: -7.5px;
 }
 
 #bigMap {
-  position: absolute;
+  position: relative;
   width: 40vw;
 }
 
@@ -213,13 +211,13 @@ margin-bottom: -7.5px;
 }
 
 .mapSection th{
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   width:calc(40vw/6);
   height:calc(40vw/6);
   color: rgba(0,0,0, 0.7);
-  text-align: center;
-  vertical-align: middle;
+  align-items: center;
+  justify-content: space-around;
   border-spacing: 0;
   border-collapse: collapse;
   margin: 0;
