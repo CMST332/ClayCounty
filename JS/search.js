@@ -14,7 +14,7 @@ $("#foo").submit(function(event){
     request = $.ajax({ //sends request
         url: "NameCCLR.php",
         type: "get",
-        data: serializedData
+        data: query
     });
     // Callback handler that will be called on success
     request.done(function (response){
@@ -88,10 +88,3 @@ function failTable(x) { //Displays "no results" on the table when called
     }
 }
 
-/*    Work in progress
-
-function modifyURL(serializedData) {
-    Window.history.replaceState( {} , "", "/" + serializedData);
-}
-
-*/
