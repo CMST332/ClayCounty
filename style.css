@@ -145,7 +145,7 @@ a.facebook {
 
 
 .mapDivide, th {
-display: inline-block;
+  display: inline-block;
   border-spacing: 0;
   border-collapse: collapse;
   margin: 0;
