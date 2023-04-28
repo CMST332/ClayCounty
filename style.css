@@ -115,9 +115,27 @@ a.facebook {
   color: #4968ad;
 }
 
+.text-center{
+  padding-bottom: 2vw;
+  border-bottom:2px solid #4b4b4b;
+}
+
+.table-responsive1{
+  display: block;
+  position: absolute;
+  width: 55vw;
+  height: 50vw;
+  right: 1.5vw;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
 /* Footer */
-fotter{
+footer{
     border-top: solid 3px rgba(0,0,0,.05);
+    position: relative;
+    top: 58vw;
+    min-width: 500px;
 }
 
 .footer-container{
@@ -142,10 +160,11 @@ fotter{
 }
 
 .map{
-  align-items: center;
+  position: absolute;
   margin-bottom: 40px;
+  padding-left: 0;
+  padding-top: 10px;
 }
-
 
 .mapDivide, th {
   display: table-cell;
@@ -154,7 +173,6 @@ fotter{
   margin: 0;
   padding: 0;
 }
-
 
 #mapDivide img {
   width: 10vw;
@@ -170,6 +188,10 @@ fotter{
 #bLine {
   width: 40vw;
   opacity: 0.5;
+}
+
+#topo{
+  box-shadow:0 0 8px gray;
 }
 
 #topo th {
@@ -194,6 +216,7 @@ fotter{
 #bigMap {
   position: relative;
   width: 40vw;
+  box-shadow:0 0 8px gray;
 }
 
 #bigMap div{
