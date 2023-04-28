@@ -3,6 +3,7 @@
 var request;
 
 // Bind to the submit event of our form
+/*
 $("#foo").submit(function(event){
    event.preventDefault();  // Prevent default posting of form - put here to work in case of errors
     if (request) { // Abort any pending request
@@ -29,7 +30,7 @@ $("#foo").submit(function(event){
            failTable(1);
         }
         
-    });
+    // });
     // Callback handler that will be called on failure
     request.fail(function (jqXHR, textStatus, errorThrown){
         // Log the error to the console
@@ -39,7 +40,7 @@ $("#foo").submit(function(event){
         );
         failTable(2);
     });
-});
+});*/
 
 function editTable(response) { //Adds rows of data from the given array results
     var table = document.getElementById("resultsTable");
@@ -88,3 +89,29 @@ function failTable(x) { //Displays "no results" on the table when called
     }
 }
 
+function autoSearch(){
+    var $form = $(this);
+    var $inputs = $form.find("input, select, button, textarea"); // Caches the fields
+    var serializedData = $form.serialize();
+    request = $.ajax({ //sends request
+        url: "NameCCLR.php",
+        type: "get",
+        data: serializedData
+    });
+    // Callback handler that will be called on success
+    request.done(function (response){
+        // Log a message to the console
+        console.log("Hooray, it worked!");
+        console.log(response);
+        if (response.length >= 1) {
+            editTable(response);
+            for (i = 0; i < response.length; i++) {
+            }
+        } else {
+           failTable(1);
+        }
+        
+    })
+}
+
+autoSearch();

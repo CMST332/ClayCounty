@@ -6,17 +6,18 @@ if ($db->connect_error) {
 }
 
 //Checks to make sure that the name field is filled, then changes the sql statement
-if (!empty($_GET['name'])){
-  $sql = "SELECT * FROM `rcclr2`";
-} else {
-  echo "The name field is required.";
-  $db->close();
-  exit();
-}
+// if (!empty($_GET['name'])){
+//   $sql = "SELECT * FROM `rcclr2`";
+// } else {
+//   echo "The name field is required.";
+//   $db->close();
+//   exit();
+// }
 
 //prepare & execute
+$sql = "SELECT * FROM `rcclr2`";
 $stmt = $db->prepare($sql);
-$LastName = $_GET['name'];
+// $LastName = $_GET['name'];
 // $stmt->bind_param("sssss", $LastName,$LastName,$LastName,$LastName,$LastName);
 $stmt->execute();
 //Display the results in an html table
