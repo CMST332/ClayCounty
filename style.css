@@ -125,7 +125,7 @@ a.facebook {
   position: absolute;
   width: 55vw;
   height: 50vw;
-  right: 1.5vw;
+  left: 43vw;
   overflow-x: auto;
   overflow-y: auto;
 }
@@ -134,7 +134,7 @@ a.facebook {
 footer{
     border-top: solid 3px rgba(0,0,0,.05);
     position: relative;
-    top: 58vw;
+    top: 52vw;
     min-width: 500px;
 }
 
