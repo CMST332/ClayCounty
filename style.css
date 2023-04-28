@@ -116,6 +116,10 @@ a.facebook {
 }
 
 /* Footer */
+fotter{
+    border-top: solid 3px rgba(0,0,0,.05);
+}
+
 .footer-container{
   display: flex;
   justify-content: space-between;
@@ -188,7 +192,7 @@ a.facebook {
 }
 
 #bigMap {
-  position: absolute;
+  position: relative;
   width: 40vw;
 }
 
