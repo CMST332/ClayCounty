@@ -149,7 +149,7 @@ footer {
 }
 
 #mapDivide th {
-  display: inline-block;
+  display: table-cell;
   border-spacing: 0;
   border-collapse: collapse;
   margin: 0;
@@ -215,10 +215,10 @@ footer {
 }
 
 .mapSection th{
-  display: inline-flex;
+  display: table-cell;
   position: relative;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  font-size: 1.5vw;
   width:calc(40vw/6);
   height:calc(40vw/6);
   color: rgba(0,0,0, 0.7);
