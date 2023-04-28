@@ -118,7 +118,7 @@ a.facebook {
 
 /* Footer */
 footer {
-  border-top: solid 1px #4b4b4b
+  border-top: solid 3px rgba(0,0,0,.05);
 }
 
 .footer-container{
@@ -127,6 +127,7 @@ footer {
   align-items: center;
   margin: 0 auto 30px;
   max-width: 800px;
+  padding-top: 10px;
 }
 .footer-container p {
   font-weight: bold;
@@ -147,12 +148,7 @@ footer {
   margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
 #mapDivide th {
-=======
-
-.mapDivide, th {
->>>>>>> 901a4d7868f64bfb4d2cecdada1297863ecec86e
   display: inline-block;
   border-spacing: 0;
   border-collapse: collapse;
@@ -226,11 +222,6 @@ footer {
   width:calc(40vw/6);
   height:calc(40vw/6);
   color: rgba(0,0,0, 0.7);
-<<<<<<< HEAD
-=======
-  align-items: center;
-  justify-content: space-around;
->>>>>>> 901a4d7868f64bfb4d2cecdada1297863ecec86e
   border-spacing: 0;
   border-collapse: collapse;
   margin: 0;
