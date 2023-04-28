@@ -115,7 +115,29 @@ a.facebook {
   color: #4968ad;
 }
 
+.text-center{
+  padding-bottom: 2vw;
+  border-bottom:2px solid #4b4b4b;
+}
+
+.table-responsive1{
+  display: block;
+  position: absolute;
+  width: 55vw;
+  height: 50vw;
+  left: 43vw;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
 /* Footer */
+footer{
+    border-top: solid 3px rgba(0,0,0,.05);
+    position: relative;
+    top: 52vw;
+    min-width: 500px;
+}
+
 .footer-container{
   display: flex;
   justify-content: space-between;
@@ -138,19 +160,19 @@ a.facebook {
 }
 
 .map{
-  align-items: center;
+  position: absolute;
   margin-bottom: 40px;
+  padding-left: 0;
+  padding-top: 10px;
 }
 
-
 .mapDivide, th {
-  display: inline-block;
+  display: table-cell;
   border-spacing: 0;
   border-collapse: collapse;
   margin: 0;
   padding: 0;
 }
-
 
 #mapDivide img {
   width: 10vw;
@@ -166,6 +188,10 @@ a.facebook {
 #bLine {
   width: 40vw;
   opacity: 0.5;
+}
+
+#topo{
+  box-shadow:0 0 8px gray;
 }
 
 #topo th {
@@ -188,8 +214,9 @@ a.facebook {
 }
 
 #bigMap {
-  position: absolute;
+  position: relative;
   width: 40vw;
+  box-shadow:0 0 8px gray;
 }
 
 #bigMap div{
@@ -211,13 +238,13 @@ a.facebook {
 }
 
 .mapSection th{
-  display: inline-flex;
+  display: table-cell;
   position: relative;
+  text-align: center;
+  font-size: 1.5vw;
   width:calc(40vw/6);
   height:calc(40vw/6);
   color: rgba(0,0,0, 0.7);
-  align-items: center;
-  justify-content: space-around;
   border-spacing: 0;
   border-collapse: collapse;
   margin: 0;
