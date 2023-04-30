@@ -121,67 +121,51 @@ autoSearch();
 
 function searchQueryJS(){
     let responseCount = 0;
-    let table = document.getElementById("resultsTable")
     let testDates = document.getElementById('dateLess').checked;
+    tableClear();
     if(testDates){
-        $("#resultsTable tbody td").remove();// clears old data from table
         for(i = 0; i < queResponse.length; i++){
             responseCount++
-                responseQueue[responseCount] = queResponse[i];
-
-                var row = table.insertRow(-1);
-                var gntr = row.insertCell(0);
-                var gnte = row.insertCell(1);
-                var sec = row.insertCell(2);
-                var tsp = row.insertCell(3);
-                var rge = row.insertCell(4);
-                var date = row.insertCell(5);
-                if(responseQueue[responseCount].First_Name_Grantor_1 == null){
-                    gntr.innerHTML = responseQueue[responseCount].Last_Name_Grantor_1;
-                }else{
-                    gntr.innerHTML = responseQueue[responseCount].First_Name_Grantor_1 + " " + responseQueue[responseCount].Last_Name_Grantor_1;
-                }
-                if(responseQueue[responseCount].First_Name_Grantee_1 == null){
-                    gnte.innerHTML = responseQueue[responseCount].Last_Name_Grantee_1;
-                }else{
-                    gnte.innerHTML = responseQueue[responseCount].First_Name_Grantee_1 + " " + responseQueue[responseCount].Last_Name_Grantee_1;
-                }
-                sec.innerHTML = responseQueue[responseCount].SEC;
-                tsp.innerHTML = responseQueue[responseCount].TSP;
-                rge.innerHTML = responseQueue[responseCount].RGE;
-                date.innerHTML = responseQueue[responseCount].DATE;      
+            responseQueue[responseCount] = queResponse[i];
+            tableDisplay(responseQueue, responseCount)
         }
     }else{
-        $("#resultsTable tbody td").remove();// clears old data from table
         for(i = 0; i < queResponse.length; i++){
             if(queResponse[i].DATE != null){
                 responseCount++
                 responseQueue[responseCount] = queResponse[i];
-
-                var row = table.insertRow(-1);
-                var gntr = row.insertCell(0);
-                var gnte = row.insertCell(1);
-                var sec = row.insertCell(2);
-                var tsp = row.insertCell(3);
-                var rge = row.insertCell(4);
-                var date = row.insertCell(5);
-                if(responseQueue[responseCount].First_Name_Grantor_1 == null){
-                    gntr.innerHTML = responseQueue[responseCount].Last_Name_Grantor_1;
-                }else{
-                    gntr.innerHTML = responseQueue[responseCount].First_Name_Grantor_1 + " " + responseQueue[responseCount].Last_Name_Grantor_1;
-                }
-                if(responseQueue[responseCount].First_Name_Grantee_1 == null){
-                    gnte.innerHTML = responseQueue[responseCount].Last_Name_Grantee_1;
-                }else{
-                    gnte.innerHTML = responseQueue[responseCount].First_Name_Grantee_1 + " " + responseQueue[responseCount].Last_Name_Grantee_1;
-                }
-                sec.innerHTML = responseQueue[responseCount].SEC;
-                tsp.innerHTML = responseQueue[responseCount].TSP;
-                rge.innerHTML = responseQueue[responseCount].RGE;
-                date.innerHTML = responseQueue[responseCount].DATE;
+                tableDisplay(responseQueue, responseCount)
             }            
         }
     }
     responseCount = 0;
 }
 
+function tableDisplay(responseQueue, responseCount){
+    let table = document.getElementById("resultsTable")
+    var row = table.insertRow(-1);
+    var gntr = row.insertCell(0);
+    var gnte = row.insertCell(1);
+    var sec = row.insertCell(2);
+    var tsp = row.insertCell(3);
+    var rge = row.insertCell(4);
+    var date = row.insertCell(5);
+    if(responseQueue[responseCount].First_Name_Grantor_1 == null){
+        gntr.innerHTML = responseQueue[responseCount].Last_Name_Grantor_1;
+    }else{
+        gntr.innerHTML = responseQueue[responseCount].First_Name_Grantor_1 + " " + responseQueue[responseCount].Last_Name_Grantor_1;
+    }
+    if(responseQueue[responseCount].First_Name_Grantee_1 == null){
+        gnte.innerHTML = responseQueue[responseCount].Last_Name_Grantee_1;
+    }else{
+        gnte.innerHTML = responseQueue[responseCount].First_Name_Grantee_1 + " " + responseQueue[responseCount].Last_Name_Grantee_1;
+    }
+    sec.innerHTML = responseQueue[responseCount].SEC;
+    tsp.innerHTML = responseQueue[responseCount].TSP;
+    rge.innerHTML = responseQueue[responseCount].RGE;
+    date.innerHTML = responseQueue[responseCount].DATE;
+}
+
+function tableClear(){
+    $("#resultsTable tbody td").remove();// clears old data from table
+}
