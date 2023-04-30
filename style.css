@@ -217,12 +217,32 @@ footer {
 #bigMap {
   position: relative;
   width: 40vw;
-  box-shadow: 0 0 8px gray;
+}
+
+#mapBack{
+  position: relative;
+  font-size: 1em;
+}
+
+#mapBack::before{
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  left: 35px;
+  border-top: 3px solid #4b4b4b;
+  border-right: 3px solid #4b4b4b;
+  transform: rotate(45deg);
 }
 
 #bigMap div{
   position: relative;
+  top: 10px;
   width: 40vw;
+  box-shadow: 0 0 8px gray;
 }
 
 #bigMap img {
