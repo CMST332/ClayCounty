@@ -22,8 +22,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <!-- jQuery and Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
@@ -88,12 +88,13 @@
     <div>
     <div class="search"> 
       
-    <form method="get" action="" id="foo" class="text-center">
-      Search for records given a last name.<br>
-      <input type="text" name="name" placeholder="Last Name" required>
-      <button><img src="img/search.png" width="40px"></i></button>
-    </form>
-  
+        <div class="text-center">
+            Search for records given a last name.<br>
+            <input type="text" name="name" placeholder="Last Name">
+            <input type="checkbox" id="dateLess" name="dateLess" value="TRUE">
+            <label>Use undated information</label>
+            <button onClick="searchQueryJS()"><img src="img/search.png" width="40px"></i></button>
+          </div>
 
       <!---displayed information after search-->
       <div class="table-responsive1">
@@ -1286,7 +1287,6 @@
 </footer>
 
   
-  <script src="JS/highlight.js"></script>
   <script src="JS/search.js"></script>
   <script src="./JS/script.js"></script>
 
