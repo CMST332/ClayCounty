@@ -89,11 +89,13 @@
     <div>
     <div class="search"> 
       
-    <form action="" class="text-center">
+    <div class="text-center">
       Search for records given a last name.<br>
       <input type="text" name="name" placeholder="Last Name">
-      <button><img src="img/search.png" width="40px"></i></button>
-    </form>
+      <input type="checkbox" id="dateLess" name="dateLess" value="TRUE">
+      <label>Use undated information</label>
+      <button onClick="searchQueryJS()"><img src="img/search.png" width="40px"></i></button>
+    </div>
   
 
       <!---displayed information after search-->
