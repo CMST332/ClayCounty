@@ -222,6 +222,7 @@ footer {
 #mapBack{
   position: relative;
   font-size: 1em;
+  left: 1vw;
 }
 
 #mapBack::before{
