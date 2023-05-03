@@ -92,7 +92,7 @@
             Search for records given a last name.<br>
             <input type="text" name="name" placeholder="Last Name">
             <input type="checkbox" id="dateLess" name="dateLess" value="TRUE">
-            <label>Use undated information</label>
+            <label>Include records without dates</label>
             <button onClick="searchQueryJS()"><img src="img/search.png" width="40px"></i></button>
           </div>
       </div>
@@ -122,6 +122,7 @@
                     set: [1930, 1960],
                     onChange: function (vals) {
                         console.log(vals);
+                        searchQueryJS();
                     }
                 });
             };
@@ -220,52 +221,52 @@
               <img id="bmap1" src="./IMG/img/1.jpg">
               <table class="mapSection">
               <tr>
-                  <th onclick="b1map6()">6</th>
-                  <th onclick="b1map5()">5</th>
-                  <th onclick="b1map4()">4</th>
-                  <th onclick="b1map3()">3</th>
-                  <th onclick="b1map2()">2</th>
-                  <th onclick="b1map1()">1</th>
+                    <th onclick="mapSearch(6,1,6)">6</th>
+                    <th onclick="mapSearch(6,1,5)">5</th>
+                    <th onclick="mapSearch(6,1,4)">4</th>
+                    <th onclick="mapSearch(6,1,3)">3</th>
+                    <th onclick="mapSearch(6,1,2)">2</th>
+                    <th onclick="mapSearch(6,1,1)">1</th>
               </tr>
               <tr>
-                  <th onclick="b1map7()">7</th>
-                  <th onclick="b1ma8()">8</th>
-                  <th onclick="b1map9()">9</th>
-                  <th onclick="b1map10()">10</th>
-                  <th onclick="b1map11()">11</th>
-                  <th onclick="b1map12()">12</th>
+                    <th onclick="mapSearch(6,1,7)">7</th>
+                    <th onclick="mapSearch(6,1,8)">8</th>
+                    <th onclick="mapSearch(6,1,9)">9</th>
+                    <th onclick="mapSearch(6,1,10)">10</th>
+                    <th onclick="mapSearch(6,1,11)">11</th>
+                    <th onclick="mapSearch(6,1,12)">12</th>
               </tr>
               <tr>
-                  <th onclick="b1map18()">18</th>
-                  <th onclick="b1map17()">17</th>
-                  <th onclick="b1map16()">16</th>
-                  <th onclick="b1map15()">15</th>
-                  <th onclick="b1map14()">14</th>
-                  <th onclick="b1map13()">13</th>
+                    <th onclick="mapSearch(6,1,18)">18</th>
+                    <th onclick="mapSearch(6,1,17)">17</th>
+                    <th onclick="mapSearch(6,1,16)">16</th>
+                    <th onclick="mapSearch(6,1,15)">15</th>
+                    <th onclick="mapSearch(6,1,14)">14</th>
+                    <th onclick="mapSearch(6,1,13)">13</th>
               </tr>
               <tr>
-                  <th onclick="b1map19()">19</th>
-                  <th onclick="b1map20()">20</th>
-                  <th onclick="b1map21()">21</th>
-                  <th onclick="b1map22()">22</th>
-                  <th onclick="b1map23()">23</th>
-                  <th onclick="b1map24()">24</th>
+                    <th onclick="mapSearch(6,1,19)">19</th>
+                    <th onclick="mapSearch(6,1,20)">20</th>
+                    <th onclick="mapSearch(6,1,21)">21</th>
+                    <th onclick="mapSearch(6,1,22)">22</th>
+                    <th onclick="mapSearch(6,1,23)">23</th>
+                    <th onclick="mapSearch(6,1,24)">24</th>
               </tr>
               <tr>
-                  <th onclick="b1map25()">30</th>
-                  <th onclick="b1map26()">29</th>
-                  <th onclick="b1map27()">28</th>
-                  <th onclick="b1map28()">27</th>
-                  <th onclick="b1map29()">26</th>
-                  <th onclick="b1map30()">25</th>
+                    <th onclick="mapSearch(6,1,30)">30</th>
+                    <th onclick="mapSearch(6,1,29)">29</th>
+                    <th onclick="mapSearch(6,1,28)">28</th>
+                    <th onclick="mapSearch(6,1,27)">27</th>
+                    <th onclick="mapSearch(6,1,26)">26</th>
+                    <th onclick="mapSearch(6,1,25)">25</th>
               </tr>
               <tr>
-                  <th onclick="b1map31()">31</th>
-                  <th onclick="b1map32()">32</th>
-                  <th onclick="b1map33()">33</th>
-                  <th onclick="b1map34()">34</th>
-                  <th onclick="b1map35()">35</th>
-                  <th onclick="b1map36()">36</th>
+                    <th onclick="mapSearch(6,1,31)">31</th>
+                    <th onclick="mapSearch(6,1,32)">32</th>
+                    <th onclick="mapSearch(6,1,33)">33</th>
+                    <th onclick="mapSearch(6,1,34)">34</th>
+                    <th onclick="mapSearch(6,1,35)">35</th>
+                    <th onclick="mapSearch(6,1,36)">36</th>
               </tr>
               </table>
           </div>
@@ -273,107 +274,107 @@
           <div id="s2" style="display: none;">
               <img id="bmap2" src="./IMG/img/2.jpg">
               <table class="mapSection">
-                  <tr>
-                      <th onclick="b2map6()">6</th>
-                      <th onclick="b2map5()">5</th>
-                      <th onclick="b2map4()">4</th>
-                      <th onclick="b2map3()">3</th>
-                      <th onclick="b2map2()">2</th>
-                      <th onclick="b2map1()">1</th>
-                  </tr>
-                  <tr>
-                      <th onclick="b2map7()">7</th>
-                      <th onclick="b2map8()">8</th>
-                      <th onclick="b2map9()">9</th>
-                      <th onclick="b2map10()">10</th>
-                      <th onclick="b2map11()">11</th>
-                      <th onclick="b2map12()">12</th>
-                  </tr>
-                  <tr>
-                    <th onclick="b2map18()">18</th>
-                    <th onclick="b2map17()">17</th>
-                    <th onclick="b2map16()">16</th>
-                    <th onclick="b2map15()">15</th>
-                    <th onclick="b2map14()">14</th>
-                    <th onclick="b2map13()">13</th>
-                  </tr>
-                  <tr>
-                    <th onclick="b2map19()">19</th>
-                    <th onclick="b2map20()">20</th>
-                    <th onclick="b2map21()">21</th>
-                    <th onclick="b2map22()">22</th>
-                    <th onclick="b2map23()">23</th>
-                    <th onclick="b2map24()">24</th>
-                  </tr>
-                  <tr>
-                    <th onclick="b2map30()">30</th>
-                    <th onclick="b2map29()">29</th>
-                    <th onclick="b2map28()">28</th>
-                    <th onclick="b2map27()">27</th>
-                    <th onclick="b2map26()">26</th>
-                    <th onclick="b2map25()">25</th>
-                  </tr>
-                  <tr>
-                    <th onclick="b2map31()">31</th>
-                    <th onclick="b2map32()">32</th>
-                    <th onclick="b2map33()">33</th>
-                    <th onclick="b2map34()">34</th>
-                    <th onclick="b2map35()">35</th>
-                    <th onclick="b2map36()">36</th>
-                  </tr>
+                <tr>
+                    <th onclick="mapSearch(6,2,6)">6</th>
+                    <th onclick="mapSearch(6,2,5)">5</th>
+                    <th onclick="mapSearch(6,2,4)">4</th>
+                    <th onclick="mapSearch(6,2,3)">3</th>
+                    <th onclick="mapSearch(6,2,2)">2</th>
+                    <th onclick="mapSearch(6,2,1)">1</th>
+              </tr>
+              <tr>
+                    <th onclick="mapSearch(6,2,7)">7</th>
+                    <th onclick="mapSearch(6,2,8)">8</th>
+                    <th onclick="mapSearch(6,2,9)">9</th>
+                    <th onclick="mapSearch(6,2,10)">10</th>
+                    <th onclick="mapSearch(6,2,11)">11</th>
+                    <th onclick="mapSearch(6,2,12)">12</th>
+              </tr>
+              <tr>
+                    <th onclick="mapSearch(6,2,18)">18</th>
+                    <th onclick="mapSearch(6,2,17)">17</th>
+                    <th onclick="mapSearch(6,2,16)">16</th>
+                    <th onclick="mapSearch(6,2,15)">15</th>
+                    <th onclick="mapSearch(6,2,14)">14</th>
+                    <th onclick="mapSearch(6,2,13)">13</th>
+              </tr>
+              <tr>
+                    <th onclick="mapSearch(6,2,19)">19</th>
+                    <th onclick="mapSearch(6,2,20)">20</th>
+                    <th onclick="mapSearch(6,2,21)">21</th>
+                    <th onclick="mapSearch(6,2,22)">22</th>
+                    <th onclick="mapSearch(6,2,23)">23</th>
+                    <th onclick="mapSearch(6,2,24)">24</th>
+              </tr>
+              <tr>
+                    <th onclick="mapSearch(6,2,30)">30</th>
+                    <th onclick="mapSearch(6,2,29)">29</th>
+                    <th onclick="mapSearch(6,2,28)">28</th>
+                    <th onclick="mapSearch(6,2,27)">27</th>
+                    <th onclick="mapSearch(6,2,26)">26</th>
+                    <th onclick="mapSearch(6,2,25)">25</th>
+              </tr>
+              <tr>
+                    <th onclick="mapSearch(6,2,31)">31</th>
+                    <th onclick="mapSearch(6,2,32)">32</th>
+                    <th onclick="mapSearch(6,2,33)">33</th>
+                    <th onclick="mapSearch(6,2,34)">34</th>
+                    <th onclick="mapSearch(6,2,35)">35</th>
+                    <th onclick="mapSearch(6,2,36)">36</th>
+              </tr>
               </table>
           </div>
 
           <div id="s3" style="display: none;">
               <img id="bmap3" src="./IMG/img/3.jpg">
               <table class="mapSection">
-              <tr>
-                  <th onclick="b3map6()">6</th>
-                  <th onclick="b3map5()">5</th>
-                  <th onclick="b3map4()">4</th>
-                  <th onclick="b3map3()">3</th>
-                  <th onclick="b3map2()">2</th>
-                  <th onclick="b3map1()">1</th>
+                <tr>
+                    <th onclick="mapSearch(6,3,6)">6</th>
+                    <th onclick="mapSearch(6,3,5)">5</th>
+                    <th onclick="mapSearch(6,3,4)">4</th>
+                    <th onclick="mapSearch(6,3,3)">3</th>
+                    <th onclick="mapSearch(6,3,2)">2</th>
+                    <th onclick="mapSearch(6,3,1)">1</th>
               </tr>
               <tr>
-                  <th onclick="b3map7()">7</th>
-                  <th onclick="b3map8()">8</th>
-                  <th onclick="b3map9()">9</th>
-                  <th onclick="b3map10()">10</th>
-                  <th onclick="b3map11()">11</th>
-                  <th onclick="b3map12()">12</th>
+                    <th onclick="mapSearch(6,3,7)">7</th>
+                    <th onclick="mapSearch(6,3,8)">8</th>
+                    <th onclick="mapSearch(6,3,9)">9</th>
+                    <th onclick="mapSearch(6,3,10)">10</th>
+                    <th onclick="mapSearch(6,3,11)">11</th>
+                    <th onclick="mapSearch(6,3,12)">12</th>
               </tr>
               <tr>
-                  <th onclick="b3map18()">18</th>
-                  <th onclick="b3map17()">17</th>
-                  <th onclick="b3map16()">16</th>
-                  <th onclick="b3map15()">15</th>
-                  <th onclick="b3map14()">14</th>
-                  <th onclick="b3map13()">13</th>
+                    <th onclick="mapSearch(6,3,18)">18</th>
+                    <th onclick="mapSearch(6,3,17)">17</th>
+                    <th onclick="mapSearch(6,3,16)">16</th>
+                    <th onclick="mapSearch(6,3,15)">15</th>
+                    <th onclick="mapSearch(6,3,14)">14</th>
+                    <th onclick="mapSearch(6,3,13)">13</th>
               </tr>
               <tr>
-                  <th onclick="b3map19()">19</th>
-                  <th onclick="b3map20()">20</th>
-                  <th onclick="b3map21()">21</th>
-                  <th onclick="b3map22()">22</th>
-                  <th onclick="b3map23()">23</th>
-                  <th onclick="b3map24()">24</th>
+                    <th onclick="mapSearch(6,3,19)">19</th>
+                    <th onclick="mapSearch(6,3,20)">20</th>
+                    <th onclick="mapSearch(6,3,21)">21</th>
+                    <th onclick="mapSearch(6,3,22)">22</th>
+                    <th onclick="mapSearch(6,3,23)">23</th>
+                    <th onclick="mapSearch(6,3,24)">24</th>
               </tr>
               <tr>
-                  <th onclick="b3map30()">30</th>
-                  <th onclick="b3map29()">29</th>
-                  <th onclick="b3map28()">28</th>
-                  <th onclick="b3map27()">27</th>
-                  <th onclick="b3map26()">26</th>
-                  <th onclick="b3map25()">25</th>
+                    <th onclick="mapSearch(6,3,30)">30</th>
+                    <th onclick="mapSearch(6,3,29)">29</th>
+                    <th onclick="mapSearch(6,3,28)">28</th>
+                    <th onclick="mapSearch(6,3,27)">27</th>
+                    <th onclick="mapSearch(6,3,26)">26</th>
+                    <th onclick="mapSearch(6,3,25)">25</th>
               </tr>
               <tr>
-                  <th onclick="b3map31()">31</th>
-                  <th onclick="b3map32()">32</th>
-                  <th onclick="b3map33()">33</th>
-                  <th onclick="b3map34()">34</th>
-                  <th onclick="b3map35()">35</th>
-                  <th onclick="b3map36()">36</th>
+                    <th onclick="mapSearch(6,3,31)">31</th>
+                    <th onclick="mapSearch(6,3,32)">32</th>
+                    <th onclick="mapSearch(6,3,33)">33</th>
+                    <th onclick="mapSearch(6,3,34)">34</th>
+                    <th onclick="mapSearch(6,3,35)">35</th>
+                    <th onclick="mapSearch(6,3,36)">36</th>
               </tr>
               </table>
           </div>
@@ -381,53 +382,53 @@
           <div id="s4" style="display: none;">
               <img id="bmap4" src="./IMG/img/4.jpg">
               <table class="mapSection">
-              <tr>
-                  <th onclick="b4map6()">6</th>
-                  <th onclick="b4map5()">5</th>
-                  <th onclick="b4map4()">4</th>
-                  <th onclick="b4map3()">3</th>
-                  <th onclick="b4map2()">2</th>
-                  <th onclick="b4map1()">1</th>
+                <tr>
+                    <th onclick="mapSearch(6,4,6)">6</th>
+                    <th onclick="mapSearch(6,4,5)">5</th>
+                    <th onclick="mapSearch(6,4,4)">4</th>
+                    <th onclick="mapSearch(6,4,3)">3</th>
+                    <th onclick="mapSearch(6,4,2)">2</th>
+                    <th onclick="mapSearch(6,4,1)">1</th>
               </tr>
               <tr>
-                  <th onclick="b4map7()">7</th>
-                  <th onclick="b4map8()">8</th>
-                  <th onclick="b4map9()">9</th>
-                  <th onclick="b4map10()">10</th>
-                  <th onclick="b4map11()">11</th>
-                  <th onclick="b4map12()">12</th>
+                    <th onclick="mapSearch(6,4,7)">7</th>
+                    <th onclick="mapSearch(6,4,8)">8</th>
+                    <th onclick="mapSearch(6,4,9)">9</th>
+                    <th onclick="mapSearch(6,4,10)">10</th>
+                    <th onclick="mapSearch(6,4,11)">11</th>
+                    <th onclick="mapSearch(6,4,12)">12</th>
               </tr>
               <tr>
-                  <th onclick="b4map18()">18</th>
-                  <th onclick="b4map17()">17</th>
-                  <th onclick="b4map16()">16</th>
-                  <th onclick="b4map15()">15</th>
-                  <th onclick="b4map14()">14</th>
-                  <th onclick="b4map13()">13</th>
+                    <th onclick="mapSearch(6,4,18)">18</th>
+                    <th onclick="mapSearch(6,4,17)">17</th>
+                    <th onclick="mapSearch(6,4,16)">16</th>
+                    <th onclick="mapSearch(6,4,15)">15</th>
+                    <th onclick="mapSearch(6,4,14)">14</th>
+                    <th onclick="mapSearch(6,4,13)">13</th>
               </tr>
               <tr>
-                  <th onclick="b4map19()">19</th>
-                  <th onclick="b4map20()">20</th>
-                  <th onclick="b4map21()">21</th>
-                  <th onclick="b4map22()">22</th>
-                  <th onclick="b4map23()">23</th>
-                  <th onclick="b4map24()">24</th>
+                    <th onclick="mapSearch(6,4,19)">19</th>
+                    <th onclick="mapSearch(6,4,20)">20</th>
+                    <th onclick="mapSearch(6,4,21)">21</th>
+                    <th onclick="mapSearch(6,4,22)">22</th>
+                    <th onclick="mapSearch(6,4,23)">23</th>
+                    <th onclick="mapSearch(6,4,24)">24</th>
               </tr>
               <tr>
-                  <th onclick="b4map30()">30</th>
-                  <th onclick="b4map29()">29</th>
-                  <th onclick="b4map28()">28</th>
-                  <th onclick="b4map27()">27</th>
-                  <th onclick="b4map26()">26</th>
-                  <th onclick="b4map25()">25</th>
+                    <th onclick="mapSearch(6,4,30)">30</th>
+                    <th onclick="mapSearch(6,4,29)">29</th>
+                    <th onclick="mapSearch(6,4,28)">28</th>
+                    <th onclick="mapSearch(6,4,27)">27</th>
+                    <th onclick="mapSearch(6,4,26)">26</th>
+                    <th onclick="mapSearch(6,4,25)">25</th>
               </tr>
               <tr>
-                  <th onclick="b4map31()">31</th>
-                  <th onclick="b4map32()">32</th>
-                  <th onclick="b4map33()">33</th>
-                  <th onclick="b4map34()">34</th>
-                  <th onclick="b4map35()">35</th>
-                  <th onclick="b4map36()">36</th>
+                    <th onclick="mapSearch(6,4,31)">31</th>
+                    <th onclick="mapSearch(6,4,32)">32</th>
+                    <th onclick="mapSearch(6,4,33)">33</th>
+                    <th onclick="mapSearch(6,4,34)">34</th>
+                    <th onclick="mapSearch(6,4,35)">35</th>
+                    <th onclick="mapSearch(6,4,36)">36</th>
               </tr>
               </table>
           </div>
@@ -435,53 +436,53 @@
           <div id="s5" style="display: none;">
               <img id="bmap5" src="./IMG/img/5.jpg">
               <table class="mapSection">
-              <tr>
-                <th onclick="b5map6()">6</th>
-                <th onclick="b5map5()">5</th>
-                <th onclick="b5map4()">4</th>
-                <th onclick="b5map3()">2</th>
-                <th onclick="b5map2()">2</th>
-                <th onclick="b5map1()">1</th>
+                <tr>
+                    <th onclick="mapSearch(7,1,6)">6</th>
+                    <th onclick="mapSearch(7,1,5)">5</th>
+                    <th onclick="mapSearch(7,1,4)">4</th>
+                    <th onclick="mapSearch(7,1,3)">3</th>
+                    <th onclick="mapSearch(7,1,2)">2</th>
+                    <th onclick="mapSearch(7,1,1)">1</th>
               </tr>
               <tr>
-                <th onclick="b5map7()">7</th>
-                <th onclick="b5map8()">8</th>
-                <th onclick="b5map9()">9</th>
-                <th onclick="b5map10()">10</th>
-                <th onclick="b5map11()">11</th>
-                <th onclick="b5map12()">12</th>
+                    <th onclick="mapSearch(7,1,7)">7</th>
+                    <th onclick="mapSearch(7,1,8)">8</th>
+                    <th onclick="mapSearch(7,1,9)">9</th>
+                    <th onclick="mapSearch(7,1,10)">10</th>
+                    <th onclick="mapSearch(7,1,11)">11</th>
+                    <th onclick="mapSearch(7,1,12)">12</th>
               </tr>
               <tr>
-                <th onclick="b5map18()">18</th>
-                <th onclick="b5map17()">17</th>
-                <th onclick="b5map16()">16</th>
-                <th onclick="b5map15()">15</th>
-                <th onclick="b5map14()">14</th>
-                <th onclick="b5map13()">13</th>
+                    <th onclick="mapSearch(7,1,18)">18</th>
+                    <th onclick="mapSearch(7,1,17)">17</th>
+                    <th onclick="mapSearch(7,1,16)">16</th>
+                    <th onclick="mapSearch(7,1,15)">15</th>
+                    <th onclick="mapSearch(7,1,14)">14</th>
+                    <th onclick="mapSearch(7,1,13)">13</th>
               </tr>
               <tr>
-                <th onclick="b5map19()">19</th>
-                <th onclick="b5map20()">20</th>
-                <th onclick="b5map21()">21</th>
-                <th onclick="b5map22()">22</th>
-                <th onclick="b5map23()">23</th>
-                <th onclick="b5map24()">24</th>
+                    <th onclick="mapSearch(7,1,19)">19</th>
+                    <th onclick="mapSearch(7,1,20)">20</th>
+                    <th onclick="mapSearch(7,1,21)">21</th>
+                    <th onclick="mapSearch(7,1,22)">22</th>
+                    <th onclick="mapSearch(7,1,23)">23</th>
+                    <th onclick="mapSearch(7,1,24)">24</th>
               </tr>
               <tr>
-                <th onclick="b5map30()">30</th>
-                <th onclick="b5map29()">29</th>
-                <th onclick="b5map28()">28</th>
-                <th onclick="b5map27()">27</th>
-                <th onclick="b5map26()">26</th>
-                <th onclick="b5map25()">25</th>
+                    <th onclick="mapSearch(7,1,30)">30</th>
+                    <th onclick="mapSearch(7,1,29)">29</th>
+                    <th onclick="mapSearch(7,1,28)">28</th>
+                    <th onclick="mapSearch(7,1,27)">27</th>
+                    <th onclick="mapSearch(7,1,26)">26</th>
+                    <th onclick="mapSearch(7,1,25)">25</th>
               </tr>
               <tr>
-                <th onclick="b5map31()">31</th>
-                <th onclick="b5map32()">32</th>
-                <th onclick="b5map33()">33</th>
-                <th onclick="b5map34()">34</th>
-                <th onclick="b5map35()">35</th>
-                <th onclick="b5map36()">36</th>
+                    <th onclick="mapSearch(7,1,31)">31</th>
+                    <th onclick="mapSearch(7,1,32)">32</th>
+                    <th onclick="mapSearch(7,1,33)">33</th>
+                    <th onclick="mapSearch(7,1,34)">34</th>
+                    <th onclick="mapSearch(7,1,35)">35</th>
+                    <th onclick="mapSearch(7,1,36)">36</th>
               </tr>
               </table>
           </div>
@@ -489,53 +490,53 @@
           <div id="s6" style="display: none;">
               <img id="bmap6" src="./IMG/img/6.jpg">
               <table class="mapSection">
-              <tr>
-                <th onclick="b6map6()">6</th>
-                <th onclick="b6map5()">5</th>
-                <th onclick="b6map4()">4</th>
-                <th onclick="b6map3()">3</th>
-                <th onclick="b6map2()">2</th>
-                <th onclick="b6map1()">1</th>
+                <tr>
+                    <th onclick="mapSearch(7,2,6)">6</th>
+                    <th onclick="mapSearch(7,2,5)">5</th>
+                    <th onclick="mapSearch(7,2,4)">4</th>
+                    <th onclick="mapSearch(7,2,3)">3</th>
+                    <th onclick="mapSearch(7,2,2)">2</th>
+                    <th onclick="mapSearch(7,2,1)">1</th>
               </tr>
               <tr>
-                <th onclick="b6map7()">7</th>
-                <th onclick="b6map8()">8</th>
-                <th onclick="b6map9()">9</th>
-                <th onclick="b6map10()">10</th>
-                <th onclick="b6map11()">11</th>
-                <th onclick="b6map12()">12</th>
+                    <th onclick="mapSearch(7,2,7)">7</th>
+                    <th onclick="mapSearch(7,2,8)">8</th>
+                    <th onclick="mapSearch(7,2,9)">9</th>
+                    <th onclick="mapSearch(7,2,10)">10</th>
+                    <th onclick="mapSearch(7,2,11)">11</th>
+                    <th onclick="mapSearch(7,2,12)">12</th>
               </tr>
               <tr>
-                <th onclick="b6map18()">18</th>
-                <th onclick="b6map17()">17</th>
-                <th onclick="b6map16()">16</th>
-                <th onclick="b6map15()">15</th>
-                <th onclick="b6map14()">14</th>
-                <th onclick="b6map13()">13</th>
+                    <th onclick="mapSearch(7,2,18)">18</th>
+                    <th onclick="mapSearch(7,2,17)">17</th>
+                    <th onclick="mapSearch(7,2,16)">16</th>
+                    <th onclick="mapSearch(7,2,15)">15</th>
+                    <th onclick="mapSearch(7,2,14)">14</th>
+                    <th onclick="mapSearch(7,2,13)">13</th>
               </tr>
               <tr>
-                <th onclick="b6map19()">19</th>
-                <th onclick="b6map20()">20</th>
-                <th onclick="b6map21()">21</th>
-                <th onclick="b6map22()">22</th>
-                <th onclick="b6map23()">23</th>
-                <th onclick="b6map24()">24</th>
+                    <th onclick="mapSearch(7,2,19)">19</th>
+                    <th onclick="mapSearch(7,2,20)">20</th>
+                    <th onclick="mapSearch(7,2,21)">21</th>
+                    <th onclick="mapSearch(7,2,22)">22</th>
+                    <th onclick="mapSearch(7,2,23)">23</th>
+                    <th onclick="mapSearch(7,2,24)">24</th>
               </tr>
               <tr>
-                <th onclick="b6map30()">30</th>
-                <th onclick="b6map29()">29</th>
-                <th onclick="b6map28()">28</th>
-                <th onclick="b6map27()">27</th>
-                <th onclick="b6map26()">26</th>
-                <th onclick="b6map25()">25</th>
+                    <th onclick="mapSearch(7,2,30)">30</th>
+                    <th onclick="mapSearch(7,2,29)">29</th>
+                    <th onclick="mapSearch(7,2,28)">28</th>
+                    <th onclick="mapSearch(7,2,27)">27</th>
+                    <th onclick="mapSearch(7,2,26)">26</th>
+                    <th onclick="mapSearch(7,2,25)">25</th>
               </tr>
               <tr>
-                <th onclick="b6map31()">31</th>
-                <th onclick="b6map32()">32</th>
-                <th onclick="b6map33()">33</th>
-                <th onclick="b6map34()">34</th>
-                <th onclick="b6map35()">35</th>
-                <th onclick="b6map36()">36</th>
+                    <th onclick="mapSearch(7,2,31)">31</th>
+                    <th onclick="mapSearch(7,2,32)">32</th>
+                    <th onclick="mapSearch(7,2,33)">33</th>
+                    <th onclick="mapSearch(7,2,34)">34</th>
+                    <th onclick="mapSearch(7,2,35)">35</th>
+                    <th onclick="mapSearch(7,2,36)">36</th>
               </tr>
               </table>
           </div>
@@ -543,53 +544,53 @@
           <div id="s7" style="display: none;">
               <img id="bmap7" src="./IMG/img/7.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(7,3,6)">6</th>
+                    <th onclick="mapSearch(7,3,5)">5</th>
+                    <th onclick="mapSearch(7,3,4)">4</th>
+                    <th onclick="mapSearch(7,3,3)">3</th>
+                    <th onclick="mapSearch(7,3,2)">2</th>
+                    <th onclick="mapSearch(7,3,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(7,3,7)">7</th>
+                    <th onclick="mapSearch(7,3,8)">8</th>
+                    <th onclick="mapSearch(7,3,9)">9</th>
+                    <th onclick="mapSearch(7,3,10)">10</th>
+                    <th onclick="mapSearch(7,3,11)">11</th>
+                    <th onclick="mapSearch(7,3,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(7,3,18)">18</th>
+                    <th onclick="mapSearch(7,3,17)">17</th>
+                    <th onclick="mapSearch(7,3,16)">16</th>
+                    <th onclick="mapSearch(7,3,15)">15</th>
+                    <th onclick="mapSearch(7,3,14)">14</th>
+                    <th onclick="mapSearch(7,3,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(7,3,19)">19</th>
+                    <th onclick="mapSearch(7,3,20)">20</th>
+                    <th onclick="mapSearch(7,3,21)">21</th>
+                    <th onclick="mapSearch(7,3,22)">22</th>
+                    <th onclick="mapSearch(7,3,23)">23</th>
+                    <th onclick="mapSearch(7,3,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(7,3,30)">30</th>
+                    <th onclick="mapSearch(7,3,29)">29</th>
+                    <th onclick="mapSearch(7,3,28)">28</th>
+                    <th onclick="mapSearch(7,3,27)">27</th>
+                    <th onclick="mapSearch(7,3,26)">26</th>
+                    <th onclick="mapSearch(7,3,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(7,3,31)">31</th>
+                    <th onclick="mapSearch(7,3,32)">32</th>
+                    <th onclick="mapSearch(7,3,33)">33</th>
+                    <th onclick="mapSearch(7,3,34)">34</th>
+                    <th onclick="mapSearch(7,3,35)">35</th>
+                    <th onclick="mapSearch(7,3,36)">36</th>
               </tr>
               </table>
           </div>
@@ -597,53 +598,53 @@
           <div id="s8" style="display: none;">
               <img id="bmap8" src="./IMG/img/8.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(7,4,6)">6</th>
+                    <th onclick="mapSearch(7,4,5)">5</th>
+                    <th onclick="mapSearch(7,4,4)">4</th>
+                    <th onclick="mapSearch(7,4,3)">3</th>
+                    <th onclick="mapSearch(7,4,2)">2</th>
+                    <th onclick="mapSearch(7,4,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(7,4,7)">7</th>
+                    <th onclick="mapSearch(7,4,8)">8</th>
+                    <th onclick="mapSearch(7,4,9)">9</th>
+                    <th onclick="mapSearch(7,4,10)">10</th>
+                    <th onclick="mapSearch(7,4,11)">11</th>
+                    <th onclick="mapSearch(7,4,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(7,4,18)">18</th>
+                    <th onclick="mapSearch(7,4,17)">17</th>
+                    <th onclick="mapSearch(7,4,16)">16</th>
+                    <th onclick="mapSearch(7,4,15)">15</th>
+                    <th onclick="mapSearch(7,4,14)">14</th>
+                    <th onclick="mapSearch(7,4,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(7,4,19)">19</th>
+                    <th onclick="mapSearch(7,4,20)">20</th>
+                    <th onclick="mapSearch(7,4,21)">21</th>
+                    <th onclick="mapSearch(7,4,22)">22</th>
+                    <th onclick="mapSearch(7,4,23)">23</th>
+                    <th onclick="mapSearch(7,4,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(7,4,30)">30</th>
+                    <th onclick="mapSearch(7,4,29)">29</th>
+                    <th onclick="mapSearch(7,4,28)">28</th>
+                    <th onclick="mapSearch(7,4,27)">27</th>
+                    <th onclick="mapSearch(7,4,26)">26</th>
+                    <th onclick="mapSearch(7,4,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(7,4,31)">31</th>
+                    <th onclick="mapSearch(7,4,32)">32</th>
+                    <th onclick="mapSearch(7,4,33)">33</th>
+                    <th onclick="mapSearch(7,4,34)">34</th>
+                    <th onclick="mapSearch(7,4,35)">35</th>
+                    <th onclick="mapSearch(7,4,36)">36</th>
               </tr>
               </table>
           </div>
@@ -651,53 +652,53 @@
           <div id="s9" style="display: none;">
               <img id="bmap9" src="./IMG/img/9.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(8,1,6)">6</th>
+                    <th onclick="mapSearch(8,1,5)">5</th>
+                    <th onclick="mapSearch(8,1,4)">4</th>
+                    <th onclick="mapSearch(8,1,3)">3</th>
+                    <th onclick="mapSearch(8,1,2)">2</th>
+                    <th onclick="mapSearch(8,1,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(8,1,7)">7</th>
+                    <th onclick="mapSearch(8,1,8)">8</th>
+                    <th onclick="mapSearch(8,1,9)">9</th>
+                    <th onclick="mapSearch(8,1,10)">10</th>
+                    <th onclick="mapSearch(8,1,11)">11</th>
+                    <th onclick="mapSearch(8,1,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(8,1,18)">18</th>
+                    <th onclick="mapSearch(8,1,17)">17</th>
+                    <th onclick="mapSearch(8,1,16)">16</th>
+                    <th onclick="mapSearch(8,1,15)">15</th>
+                    <th onclick="mapSearch(8,1,14)">14</th>
+                    <th onclick="mapSearch(8,1,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(8,1,19)">19</th>
+                    <th onclick="mapSearch(8,1,20)">20</th>
+                    <th onclick="mapSearch(8,1,21)">21</th>
+                    <th onclick="mapSearch(8,1,22)">22</th>
+                    <th onclick="mapSearch(8,1,23)">23</th>
+                    <th onclick="mapSearch(8,1,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(8,1,30)">30</th>
+                    <th onclick="mapSearch(8,1,29)">29</th>
+                    <th onclick="mapSearch(8,1,28)">28</th>
+                    <th onclick="mapSearch(8,1,27)">27</th>
+                    <th onclick="mapSearch(8,1,26)">26</th>
+                    <th onclick="mapSearch(8,1,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(8,1,31)">31</th>
+                    <th onclick="mapSearch(8,1,32)">32</th>
+                    <th onclick="mapSearch(8,1,33)">33</th>
+                    <th onclick="mapSearch(8,1,34)">34</th>
+                    <th onclick="mapSearch(8,1,35)">35</th>
+                    <th onclick="mapSearch(8,1,36)">36</th>
               </tr>
               </table>
           </div>
@@ -705,53 +706,53 @@
           <div id="s10" style="display: none;">
               <img id="bmap10" src="./IMG/img/10.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(8,2,6)">6</th>
+                    <th onclick="mapSearch(8,2,5)">5</th>
+                    <th onclick="mapSearch(8,2,4)">4</th>
+                    <th onclick="mapSearch(8,2,3)">3</th>
+                    <th onclick="mapSearch(8,2,2)">2</th>
+                    <th onclick="mapSearch(8,2,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(8,2,7)">7</th>
+                    <th onclick="mapSearch(8,2,8)">8</th>
+                    <th onclick="mapSearch(8,2,9)">9</th>
+                    <th onclick="mapSearch(8,2,10)">10</th>
+                    <th onclick="mapSearch(8,2,11)">11</th>
+                    <th onclick="mapSearch(8,2,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(8,2,18)">18</th>
+                    <th onclick="mapSearch(8,2,17)">17</th>
+                    <th onclick="mapSearch(8,2,16)">16</th>
+                    <th onclick="mapSearch(8,2,15)">15</th>
+                    <th onclick="mapSearch(8,2,14)">14</th>
+                    <th onclick="mapSearch(8,2,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(8,2,19)">19</th>
+                    <th onclick="mapSearch(8,2,20)">20</th>
+                    <th onclick="mapSearch(8,2,21)">21</th>
+                    <th onclick="mapSearch(8,2,22)">22</th>
+                    <th onclick="mapSearch(8,2,23)">23</th>
+                    <th onclick="mapSearch(8,2,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(8,2,30)">30</th>
+                    <th onclick="mapSearch(8,2,29)">29</th>
+                    <th onclick="mapSearch(8,2,28)">28</th>
+                    <th onclick="mapSearch(8,2,27)">27</th>
+                    <th onclick="mapSearch(8,2,26)">26</th>
+                    <th onclick="mapSearch(8,2,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(8,2,31)">31</th>
+                    <th onclick="mapSearch(8,2,32)">32</th>
+                    <th onclick="mapSearch(8,2,33)">33</th>
+                    <th onclick="mapSearch(8,2,34)">34</th>
+                    <th onclick="mapSearch(8,2,35)">35</th>
+                    <th onclick="mapSearch(8,2,36)">36</th>
               </tr>
               </table>
           </div>
@@ -759,53 +760,53 @@
           <div id="s11" style="display: none;">
               <img id="bmap11" src="./IMG/img/11.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(8,3,6)">6</th>
+                    <th onclick="mapSearch(8,3,5)">5</th>
+                    <th onclick="mapSearch(8,3,4)">4</th>
+                    <th onclick="mapSearch(8,3,3)">3</th>
+                    <th onclick="mapSearch(8,3,2)">2</th>
+                    <th onclick="mapSearch(8,3,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(8,3,7)">7</th>
+                    <th onclick="mapSearch(8,3,8)">8</th>
+                    <th onclick="mapSearch(8,3,9)">9</th>
+                    <th onclick="mapSearch(8,3,10)">10</th>
+                    <th onclick="mapSearch(8,3,11)">11</th>
+                    <th onclick="mapSearch(8,3,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(8,3,18)">18</th>
+                    <th onclick="mapSearch(8,3,17)">17</th>
+                    <th onclick="mapSearch(8,3,16)">16</th>
+                    <th onclick="mapSearch(8,3,15)">15</th>
+                    <th onclick="mapSearch(8,3,14)">14</th>
+                    <th onclick="mapSearch(8,3,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(8,3,19)">19</th>
+                    <th onclick="mapSearch(8,3,20)">20</th>
+                    <th onclick="mapSearch(8,3,21)">21</th>
+                    <th onclick="mapSearch(8,3,22)">22</th>
+                    <th onclick="mapSearch(8,3,23)">23</th>
+                    <th onclick="mapSearch(8,3,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(8,3,30)">30</th>
+                    <th onclick="mapSearch(8,3,29)">29</th>
+                    <th onclick="mapSearch(8,3,28)">28</th>
+                    <th onclick="mapSearch(8,3,27)">27</th>
+                    <th onclick="mapSearch(8,3,26)">26</th>
+                    <th onclick="mapSearch(8,3,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(8,3,31)">31</th>
+                    <th onclick="mapSearch(8,3,32)">32</th>
+                    <th onclick="mapSearch(8,3,33)">33</th>
+                    <th onclick="mapSearch(8,3,34)">34</th>
+                    <th onclick="mapSearch(8,3,35)">35</th>
+                    <th onclick="mapSearch(8,3,36)">36</th>
               </tr>
               </table>
           </div>
@@ -813,53 +814,53 @@
           <div id="s12" style="display: none;">
               <img id="bmap12" src="./IMG/img/12.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(8,4,6)">6</th>
+                    <th onclick="mapSearch(8,4,5)">5</th>
+                    <th onclick="mapSearch(8,4,4)">4</th>
+                    <th onclick="mapSearch(8,4,3)">3</th>
+                    <th onclick="mapSearch(8,4,2)">2</th>
+                    <th onclick="mapSearch(8,4,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(8,4,7)">7</th>
+                    <th onclick="mapSearch(8,4,8)">8</th>
+                    <th onclick="mapSearch(8,4,9)">9</th>
+                    <th onclick="mapSearch(8,4,10)">10</th>
+                    <th onclick="mapSearch(8,4,11)">11</th>
+                    <th onclick="mapSearch(8,4,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(8,4,18)">18</th>
+                    <th onclick="mapSearch(8,4,17)">17</th>
+                    <th onclick="mapSearch(8,4,16)">16</th>
+                    <th onclick="mapSearch(8,4,15)">15</th>
+                    <th onclick="mapSearch(8,4,14)">14</th>
+                    <th onclick="mapSearch(8,4,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(8,4,19)">19</th>
+                    <th onclick="mapSearch(8,4,20)">20</th>
+                    <th onclick="mapSearch(8,4,21)">21</th>
+                    <th onclick="mapSearch(8,4,22)">22</th>
+                    <th onclick="mapSearch(8,4,23)">23</th>
+                    <th onclick="mapSearch(8,4,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(8,4,30)">30</th>
+                    <th onclick="mapSearch(8,4,29)">29</th>
+                    <th onclick="mapSearch(8,4,28)">28</th>
+                    <th onclick="mapSearch(8,4,27)">27</th>
+                    <th onclick="mapSearch(8,4,26)">26</th>
+                    <th onclick="mapSearch(8,4,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(8,4,31)">31</th>
+                    <th onclick="mapSearch(8,4,32)">32</th>
+                    <th onclick="mapSearch(8,4,33)">33</th>
+                    <th onclick="mapSearch(8,4,34)">34</th>
+                    <th onclick="mapSearch(8,4,35)">35</th>
+                    <th onclick="mapSearch(8,4,36)">36</th>
               </tr>
               </table>
           </div>
@@ -867,53 +868,53 @@
           <div id="s13" style="display: none;">
               <img id="bmap13" src="./IMG/img/13.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(9,1,6)">6</th>
+                    <th onclick="mapSearch(9,1,5)">5</th>
+                    <th onclick="mapSearch(9,1,4)">4</th>
+                    <th onclick="mapSearch(9,1,3)">3</th>
+                    <th onclick="mapSearch(9,1,2)">2</th>
+                    <th onclick="mapSearch(9,1,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(9,1,7)">7</th>
+                    <th onclick="mapSearch(9,1,8)">8</th>
+                    <th onclick="mapSearch(9,1,9)">9</th>
+                    <th onclick="mapSearch(9,1,10)">10</th>
+                    <th onclick="mapSearch(9,1,11)">11</th>
+                    <th onclick="mapSearch(9,1,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(9,1,18)">18</th>
+                    <th onclick="mapSearch(9,1,17)">17</th>
+                    <th onclick="mapSearch(9,1,16)">16</th>
+                    <th onclick="mapSearch(9,1,15)">15</th>
+                    <th onclick="mapSearch(9,1,14)">14</th>
+                    <th onclick="mapSearch(9,1,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(9,1,19)">19</th>
+                    <th onclick="mapSearch(9,1,20)">20</th>
+                    <th onclick="mapSearch(9,1,21)">21</th>
+                    <th onclick="mapSearch(9,1,22)">22</th>
+                    <th onclick="mapSearch(9,1,23)">23</th>
+                    <th onclick="mapSearch(9,1,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(9,1,30)">30</th>
+                    <th onclick="mapSearch(9,1,29)">29</th>
+                    <th onclick="mapSearch(9,1,28)">28</th>
+                    <th onclick="mapSearch(9,1,27)">27</th>
+                    <th onclick="mapSearch(9,1,26)">26</th>
+                    <th onclick="mapSearch(9,1,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(9,1,31)">31</th>
+                    <th onclick="mapSearch(9,1,32)">32</th>
+                    <th onclick="mapSearch(9,1,33)">33</th>
+                    <th onclick="mapSearch(9,1,34)">34</th>
+                    <th onclick="mapSearch(9,1,35)">35</th>
+                    <th onclick="mapSearch(9,1,36)">36</th>
               </tr>
               </table>
           </div>
@@ -921,53 +922,53 @@
           <div id="s14" style="display: none;">
               <img id="bmap14" src="./IMG/img/14.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(9,2,6)">6</th>
+                    <th onclick="mapSearch(9,2,5)">5</th>
+                    <th onclick="mapSearch(9,2,4)">4</th>
+                    <th onclick="mapSearch(9,2,3)">3</th>
+                    <th onclick="mapSearch(9,2,2)">2</th>
+                    <th onclick="mapSearch(9,2,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(9,2,7)">7</th>
+                    <th onclick="mapSearch(9,2,8)">8</th>
+                    <th onclick="mapSearch(9,2,9)">9</th>
+                    <th onclick="mapSearch(9,2,10)">10</th>
+                    <th onclick="mapSearch(9,2,11)">11</th>
+                    <th onclick="mapSearch(9,2,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(9,2,18)">18</th>
+                    <th onclick="mapSearch(9,2,17)">17</th>
+                    <th onclick="mapSearch(9,2,16)">16</th>
+                    <th onclick="mapSearch(9,2,15)">15</th>
+                    <th onclick="mapSearch(9,2,14)">14</th>
+                    <th onclick="mapSearch(9,2,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(9,2,19)">19</th>
+                    <th onclick="mapSearch(9,2,20)">20</th>
+                    <th onclick="mapSearch(9,2,21)">21</th>
+                    <th onclick="mapSearch(9,2,22)">22</th>
+                    <th onclick="mapSearch(9,2,23)">23</th>
+                    <th onclick="mapSearch(9,2,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(9,2,30)">30</th>
+                    <th onclick="mapSearch(9,2,29)">29</th>
+                    <th onclick="mapSearch(9,2,28)">28</th>
+                    <th onclick="mapSearch(9,2,27)">27</th>
+                    <th onclick="mapSearch(9,2,26)">26</th>
+                    <th onclick="mapSearch(9,2,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(9,2,31)">31</th>
+                    <th onclick="mapSearch(9,2,32)">32</th>
+                    <th onclick="mapSearch(9,2,33)">33</th>
+                    <th onclick="mapSearch(9,2,34)">34</th>
+                    <th onclick="mapSearch(9,2,35)">35</th>
+                    <th onclick="mapSearch(9,2,36)">36</th>
               </tr>
               </table>
           </div>
@@ -975,53 +976,53 @@
           <div id="s15" style="display: none;">
               <img id="bmap15" src="./IMG/img/15.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(9,3,6)">6</th>
+                    <th onclick="mapSearch(9,3,5)">5</th>
+                    <th onclick="mapSearch(9,3,4)">4</th>
+                    <th onclick="mapSearch(9,3,3)">3</th>
+                    <th onclick="mapSearch(9,3,2)">2</th>
+                    <th onclick="mapSearch(9,3,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(9,3,7)">7</th>
+                    <th onclick="mapSearch(9,3,8)">8</th>
+                    <th onclick="mapSearch(9,3,9)">9</th>
+                    <th onclick="mapSearch(9,3,10)">10</th>
+                    <th onclick="mapSearch(9,3,11)">11</th>
+                    <th onclick="mapSearch(9,3,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(9,3,18)">18</th>
+                    <th onclick="mapSearch(9,3,17)">17</th>
+                    <th onclick="mapSearch(9,3,16)">16</th>
+                    <th onclick="mapSearch(9,3,15)">15</th>
+                    <th onclick="mapSearch(9,3,14)">14</th>
+                    <th onclick="mapSearch(9,3,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(9,3,19)">19</th>
+                    <th onclick="mapSearch(9,3,20)">20</th>
+                    <th onclick="mapSearch(9,3,21)">21</th>
+                    <th onclick="mapSearch(9,3,22)">22</th>
+                    <th onclick="mapSearch(9,3,23)">23</th>
+                    <th onclick="mapSearch(9,3,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(9,3,30)">30</th>
+                    <th onclick="mapSearch(9,3,29)">29</th>
+                    <th onclick="mapSearch(9,3,28)">28</th>
+                    <th onclick="mapSearch(9,3,27)">27</th>
+                    <th onclick="mapSearch(9,3,26)">26</th>
+                    <th onclick="mapSearch(9,3,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(9,3,31)">31</th>
+                    <th onclick="mapSearch(9,3,32)">32</th>
+                    <th onclick="mapSearch(9,3,33)">33</th>
+                    <th onclick="mapSearch(9,3,34)">34</th>
+                    <th onclick="mapSearch(9,3,35)">35</th>
+                    <th onclick="mapSearch(9,3,36)">36</th>
               </tr>
               </table>
           </div>
@@ -1029,53 +1030,53 @@
           <div id="s16" style="display: none;">
               <img id="bmap16" src="./IMG/img/16.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(9,4,6)">6</th>
+                    <th onclick="mapSearch(9,4,5)">5</th>
+                    <th onclick="mapSearch(9,4,4)">4</th>
+                    <th onclick="mapSearch(9,4,3)">3</th>
+                    <th onclick="mapSearch(9,4,2)">2</th>
+                    <th onclick="mapSearch(9,4,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(9,4,7)">7</th>
+                    <th onclick="mapSearch(9,4,8)">8</th>
+                    <th onclick="mapSearch(9,4,9)">9</th>
+                    <th onclick="mapSearch(9,4,10)">10</th>
+                    <th onclick="mapSearch(9,4,11)">11</th>
+                    <th onclick="mapSearch(9,4,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(9,4,18)">18</th>
+                    <th onclick="mapSearch(9,4,17)">17</th>
+                    <th onclick="mapSearch(9,4,16)">16</th>
+                    <th onclick="mapSearch(9,4,15)">15</th>
+                    <th onclick="mapSearch(9,4,14)">14</th>
+                    <th onclick="mapSearch(9,4,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(9,4,19)">19</th>
+                    <th onclick="mapSearch(9,4,20)">20</th>
+                    <th onclick="mapSearch(9,4,21)">21</th>
+                    <th onclick="mapSearch(9,4,22)">22</th>
+                    <th onclick="mapSearch(9,4,23)">23</th>
+                    <th onclick="mapSearch(9,4,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(9,4,30)">30</th>
+                    <th onclick="mapSearch(9,4,29)">29</th>
+                    <th onclick="mapSearch(9,4,28)">28</th>
+                    <th onclick="mapSearch(9,4,27)">27</th>
+                    <th onclick="mapSearch(9,4,26)">26</th>
+                    <th onclick="mapSearch(9,4,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(9,4,31)">31</th>
+                    <th onclick="mapSearch(9,4,32)">32</th>
+                    <th onclick="mapSearch(9,4,33)">33</th>
+                    <th onclick="mapSearch(9,4,34)">34</th>
+                    <th onclick="mapSearch(9,4,35)">35</th>
+                    <th onclick="mapSearch(9,4,36)">36</th>
               </tr>
               </table>
           </div>
@@ -1083,53 +1084,53 @@
           <div id="s17" style="display: none;">
               <img id="bmap17" src="./IMG/img/17.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(10,1,6)">6</th>
+                    <th onclick="mapSearch(10,1,5)">5</th>
+                    <th onclick="mapSearch(10,1,4)">4</th>
+                    <th onclick="mapSearch(10,1,3)">3</th>
+                    <th onclick="mapSearch(10,1,2)">2</th>
+                    <th onclick="mapSearch(10,1,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(10,1,7)">7</th>
+                    <th onclick="mapSearch(10,1,8)">8</th>
+                    <th onclick="mapSearch(10,1,9)">9</th>
+                    <th onclick="mapSearch(10,1,10)">10</th>
+                    <th onclick="mapSearch(10,1,11)">11</th>
+                    <th onclick="mapSearch(10,1,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(10,1,18)">18</th>
+                    <th onclick="mapSearch(10,1,17)">17</th>
+                    <th onclick="mapSearch(10,1,16)">16</th>
+                    <th onclick="mapSearch(10,1,15)">15</th>
+                    <th onclick="mapSearch(10,1,14)">14</th>
+                    <th onclick="mapSearch(10,1,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(10,1,19)">19</th>
+                    <th onclick="mapSearch(10,1,20)">20</th>
+                    <th onclick="mapSearch(10,1,21)">21</th>
+                    <th onclick="mapSearch(10,1,22)">22</th>
+                    <th onclick="mapSearch(10,1,23)">23</th>
+                    <th onclick="mapSearch(10,1,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(10,1,30)">30</th>
+                    <th onclick="mapSearch(10,1,29)">29</th>
+                    <th onclick="mapSearch(10,1,28)">28</th>
+                    <th onclick="mapSearch(10,1,27)">27</th>
+                    <th onclick="mapSearch(10,1,26)">26</th>
+                    <th onclick="mapSearch(10,1,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(10,1,31)">31</th>
+                    <th onclick="mapSearch(10,1,32)">32</th>
+                    <th onclick="mapSearch(10,1,33)">33</th>
+                    <th onclick="mapSearch(10,1,34)">34</th>
+                    <th onclick="mapSearch(10,1,35)">35</th>
+                    <th onclick="mapSearch(10,1,36)">36</th>
               </tr>
               </table>
           </div>
@@ -1137,53 +1138,53 @@
           <div id="s18" style="display: none;">
               <img id="bmap18" src="./IMG/img/18.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(10,2,6)">6</th>
+                    <th onclick="mapSearch(10,2,5)">5</th>
+                    <th onclick="mapSearch(10,2,4)">4</th>
+                    <th onclick="mapSearch(10,2,3)">3</th>
+                    <th onclick="mapSearch(10,2,2)">2</th>
+                    <th onclick="mapSearch(10,2,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(10,2,7)">7</th>
+                    <th onclick="mapSearch(10,2,8)">8</th>
+                    <th onclick="mapSearch(10,2,9)">9</th>
+                    <th onclick="mapSearch(10,2,10)">10</th>
+                    <th onclick="mapSearch(10,2,11)">11</th>
+                    <th onclick="mapSearch(10,2,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(10,2,18)">18</th>
+                    <th onclick="mapSearch(10,2,17)">17</th>
+                    <th onclick="mapSearch(10,2,16)">16</th>
+                    <th onclick="mapSearch(10,2,15)">15</th>
+                    <th onclick="mapSearch(10,2,14)">14</th>
+                    <th onclick="mapSearch(10,2,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(10,2,19)">19</th>
+                    <th onclick="mapSearch(10,2,20)">20</th>
+                    <th onclick="mapSearch(10,2,21)">21</th>
+                    <th onclick="mapSearch(10,2,22)">22</th>
+                    <th onclick="mapSearch(10,2,23)">23</th>
+                    <th onclick="mapSearch(10,2,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(10,2,30)">30</th>
+                    <th onclick="mapSearch(10,2,29)">29</th>
+                    <th onclick="mapSearch(10,2,28)">28</th>
+                    <th onclick="mapSearch(10,2,27)">27</th>
+                    <th onclick="mapSearch(10,2,26)">26</th>
+                    <th onclick="mapSearch(10,2,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(10,2,31)">31</th>
+                    <th onclick="mapSearch(10,2,32)">32</th>
+                    <th onclick="mapSearch(10,2,33)">33</th>
+                    <th onclick="mapSearch(10,2,34)">34</th>
+                    <th onclick="mapSearch(10,2,35)">35</th>
+                    <th onclick="mapSearch(10,2,36)">36</th>
               </tr>
               </table>
           </div>
@@ -1191,53 +1192,53 @@
           <div id="s19" style="display: none;">
               <img id="bmap19" src="./IMG/img/19.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(10,3,6)">6</th>
+                    <th onclick="mapSearch(10,3,5)">5</th>
+                    <th onclick="mapSearch(10,3,4)">4</th>
+                    <th onclick="mapSearch(10,3,3)">3</th>
+                    <th onclick="mapSearch(10,3,2)">2</th>
+                    <th onclick="mapSearch(10,3,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(10,3,7)">7</th>
+                    <th onclick="mapSearch(10,3,8)">8</th>
+                    <th onclick="mapSearch(10,3,9)">9</th>
+                    <th onclick="mapSearch(10,3,10)">10</th>
+                    <th onclick="mapSearch(10,3,11)">11</th>
+                    <th onclick="mapSearch(10,3,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(10,3,18)">18</th>
+                    <th onclick="mapSearch(10,3,17)">17</th>
+                    <th onclick="mapSearch(10,3,16)">16</th>
+                    <th onclick="mapSearch(10,3,15)">15</th>
+                    <th onclick="mapSearch(10,3,14)">14</th>
+                    <th onclick="mapSearch(10,3,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(10,3,19)">19</th>
+                    <th onclick="mapSearch(10,3,20)">20</th>
+                    <th onclick="mapSearch(10,3,21)">21</th>
+                    <th onclick="mapSearch(10,3,22)">22</th>
+                    <th onclick="mapSearch(10,3,23)">23</th>
+                    <th onclick="mapSearch(10,3,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(10,3,30)">30</th>
+                    <th onclick="mapSearch(10,3,29)">29</th>
+                    <th onclick="mapSearch(10,3,28)">28</th>
+                    <th onclick="mapSearch(10,3,27)">27</th>
+                    <th onclick="mapSearch(10,3,26)">26</th>
+                    <th onclick="mapSearch(10,3,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(10,3,31)">31</th>
+                    <th onclick="mapSearch(10,3,32)">32</th>
+                    <th onclick="mapSearch(10,3,33)">33</th>
+                    <th onclick="mapSearch(10,3,34)">34</th>
+                    <th onclick="mapSearch(10,3,35)">35</th>
+                    <th onclick="mapSearch(10,3,36)">36</th>
               </tr>
               </table>
           </div>
@@ -1245,53 +1246,53 @@
           <div id="s20" style="display: none;">
               <img id="bmap20" src="./IMG/img/20.jpg">
               <table class="mapSection">
-              <tr>
-                  <th>6</th>
-                  <th>5</th>
-                  <th>4</th>
-                  <th>3</th>
-                  <th>2</th>
-                  <th>1</th>
+                <tr>
+                    <th onclick="mapSearch(10,4,6)">6</th>
+                    <th onclick="mapSearch(10,4,5)">5</th>
+                    <th onclick="mapSearch(10,4,4)">4</th>
+                    <th onclick="mapSearch(10,4,3)">3</th>
+                    <th onclick="mapSearch(10,4,2)">2</th>
+                    <th onclick="mapSearch(10,4,1)">1</th>
               </tr>
               <tr>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
+                    <th onclick="mapSearch(10,4,7)">7</th>
+                    <th onclick="mapSearch(10,4,8)">8</th>
+                    <th onclick="mapSearch(10,4,9)">9</th>
+                    <th onclick="mapSearch(10,4,10)">10</th>
+                    <th onclick="mapSearch(10,4,11)">11</th>
+                    <th onclick="mapSearch(10,4,12)">12</th>
               </tr>
               <tr>
-                  <th>18</th>
-                  <th>17</th>
-                  <th>16</th>
-                  <th>15</th>
-                  <th>14</th>
-                  <th>13</th>
+                    <th onclick="mapSearch(10,4,18)">18</th>
+                    <th onclick="mapSearch(10,4,17)">17</th>
+                    <th onclick="mapSearch(10,4,16)">16</th>
+                    <th onclick="mapSearch(10,4,15)">15</th>
+                    <th onclick="mapSearch(10,4,14)">14</th>
+                    <th onclick="mapSearch(10,4,13)">13</th>
               </tr>
               <tr>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>21</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
+                    <th onclick="mapSearch(10,4,19)">19</th>
+                    <th onclick="mapSearch(10,4,20)">20</th>
+                    <th onclick="mapSearch(10,4,21)">21</th>
+                    <th onclick="mapSearch(10,4,22)">22</th>
+                    <th onclick="mapSearch(10,4,23)">23</th>
+                    <th onclick="mapSearch(10,4,24)">24</th>
               </tr>
               <tr>
-                  <th>30</th>
-                  <th>29</th>
-                  <th>28</th>
-                  <th>27</th>
-                  <th>26</th>
-                  <th>25</th>
+                    <th onclick="mapSearch(10,4,30)">30</th>
+                    <th onclick="mapSearch(10,4,29)">29</th>
+                    <th onclick="mapSearch(10,4,28)">28</th>
+                    <th onclick="mapSearch(10,4,27)">27</th>
+                    <th onclick="mapSearch(10,4,26)">26</th>
+                    <th onclick="mapSearch(10,4,25)">25</th>
               </tr>
               <tr>
-                  <th>31</th>
-                  <th>32</th>
-                  <th>33</th>
-                  <th>34</th>
-                  <th>35</th>
-                  <th>36</th>
+                    <th onclick="mapSearch(10,4,31)">31</th>
+                    <th onclick="mapSearch(10,4,32)">32</th>
+                    <th onclick="mapSearch(10,4,33)">33</th>
+                    <th onclick="mapSearch(10,4,34)">34</th>
+                    <th onclick="mapSearch(10,4,35)">35</th>
+                    <th onclick="mapSearch(10,4,36)">36</th>
               </tr>
               </table>
           </div>

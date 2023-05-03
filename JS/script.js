@@ -179,3 +179,7 @@
             topo.style.display ="none",sec20.style.display = "block",mBack.style.display = "block"}
     }
 
+
+    function mapSearch(township, range, section){
+        console.log("Township: " + township + " Range: " + range + " Section: " + section)
+    }
