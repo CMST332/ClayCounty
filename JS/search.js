@@ -5,46 +5,6 @@ var request;
 let queResponse = {};
 let responseQueue = {};
 
-// Bind to the submit event of our form
-/*
-$("#foo").submit(function(event){
-   event.preventDefault();  // Prevent default posting of form - put here to work in case of errors
-    if (request) { // Abort any pending request
-        request.abort();
-    }
-    var $form = $(this);
-    var $inputs = $form.find("input, select, button, textarea"); // Caches the fields
-    var serializedData = $form.serialize();
-    request = $.ajax({ //sends request
-        url: "NameCCLR.php",
-        type: "get",
-        data: serializedData
-    });
-    // Callback handler that will be called on success
-    request.done(function (response){
-        // Log a message to the console
-        console.log("Hooray, it worked!");
-        console.log(response);
-        if (response.length >= 1) {
-            editTable(response);
-            for (i = 0; i < response.length; i++) {
-            }
-        } else {
-           failTable(1);
-        }
-        
-    // });
-    // Callback handler that will be called on failure
-    request.fail(function (jqXHR, textStatus, errorThrown){
-        // Log the error to the console
-        console.error(
-            "The following error occurred: "+
-            textStatus, errorThrown
-        );
-        failTable(2);
-    });
-});*/
-
 function editTable(response) { //Adds rows of data from the given array results
     var table = document.getElementById("resultsTable");
      $("#resultsTable tbody td").remove();// clears old data from table
@@ -73,27 +33,6 @@ function editTable(response) { //Adds rows of data from the given array results
     }
 }
 
-/*
-function failTable(x) { //Displays "no results" on the table when called
-    var table = document.getElementById("resultsTable");
-    $("#resultsTable tbody td").remove();
-    var row = table.insertRow(-1);
-    var err = row.insertCell(0);
-    row.insertCell(1);
-    row.insertCell(2);
-    row.insertCell(3);
-    row.insertCell(4);
-    row.insertCell(5);
-    if (x == 1) {
-    err.innerHTML = "No results";
-    }
-    if (x == 2) {
-    err.innerHTML = "Error";
-    alert("An error has occured. Please refresh the page and try again.");
-    }
-}
-*/
-
 function autoSearch(){
     var $form = $(this);
     var $inputs = $form.find("input, select, button, textarea"); // Caches the fields
@@ -105,13 +44,12 @@ function autoSearch(){
     });
     // Callback handler that will be called on success
     request.done(function (response){
-        console.log(response)
         if (response.length >= 1) {
             queResponse = response;
             // editTable(response);
             // searchQueryJS(response);
         } else {
-           failTable(1);
+           console.log("Failed")
         }
         
     })
@@ -121,8 +59,17 @@ autoSearch();
 
 
 function searchQueryJS(){
+    autoSearch();
     let responseCount = 0;
     let testDates = document.getElementById('dateLess').checked;
+    let testType = document.getElementById('type').value;
+    let testName = document.getElementById('nameSearch').value;
+    let testGrant = document.getElementById('grants').value;
+    let enableType = document.getElementById('useType').checked;
+    let enableName = document.getElementById('useName').checked;
+    let township = locationSearch[0];
+    let range = locationSearch[1];
+    let section = locationSearch[2];
     tableClear();
     if(testDates){
         for(i = 0; i < queResponse.length; i++){
@@ -140,17 +87,25 @@ function searchQueryJS(){
         }
     }
     responseCount = 0;
+    console.log(enableType + " " + testType + " " + enableName + " " + testName + " " + testGrant)
+}
+
+function dateSliderInport(values){
+    searchQueryJS();
+    console.log(values)
 }
 
 function tableDisplay(responseQueue, responseCount){
     let table = document.getElementById("resultsTable")
     var row = table.insertRow(-1);
-    var gntr = row.insertCell(0);
-    var gnte = row.insertCell(1);
-    var sec = row.insertCell(2);
-    var tsp = row.insertCell(3);
-    var rge = row.insertCell(4);
-    var date = row.insertCell(5);
+    var type = row.insertCell(0);
+    var gntr = row.insertCell(1);
+    var gnte = row.insertCell(2);
+    var sec = row.insertCell(3);
+    var tsp = row.insertCell(4);
+    var rge = row.insertCell(5);
+    var date = row.insertCell(6);
+    type.innerHTML = responseQueue[responseCount].TYPE;
     if(responseQueue[responseCount].First_Name_Grantor_1 == null){
         gntr.innerHTML = responseQueue[responseCount].Last_Name_Grantor_1;
     }else{
@@ -170,3 +125,43 @@ function tableDisplay(responseQueue, responseCount){
 function tableClear(){
     $("#resultsTable tbody td").remove();// clears old data from table
 }
+
+//enables and disables dropdowns
+
+function handleClick(id){
+    switch(id.id){
+        case 'useType':
+            if(id.checked == true){
+                document.getElementById("type").disabled = false;
+            }else{
+                document.getElementById("type").disabled = true;
+            }
+        break;
+        case 'useName':
+            if(id.checked == true){
+                document.getElementById("nameSearch").disabled = false;
+                document.getElementById("grants").disabled = false;
+            }else{
+                document.getElementById("nameSearch").disabled = true;
+                document.getElementById("grants").disabled = true;
+            }
+        break;
+        default:
+            console.log("error id not found")
+    }
+}
+
+
+//makes all checkboxes default to unselected
+function setupChecks(){
+    var inputs = document.getElementsByTagName('input');
+    for (var i=0; i<inputs.length; i++)  {
+        if (inputs[i].type == 'checkbox')   {
+            inputs[i].checked = false;
+        }
+    }  
+    document.getElementById("type").disabled = true;
+    document.getElementById("nameSearch").disabled = true;
+    document.getElementById("grants").disabled = true; 
+}
+setupChecks();

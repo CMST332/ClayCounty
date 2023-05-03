@@ -89,20 +89,42 @@
     <div class="search"> 
       
         <div class="text-center">
-            Search for records given a last name.<br>
-            <input type="text" name="name" placeholder="Last Name">
+            <h3>Search for records:</h3>
+
+            <!--include entries without date information-->
             <input type="checkbox" id="dateLess" name="dateLess" value="TRUE">
             <label>Include records without dates</label>
+            <br>
+
+            <!--dropdown for type of landdeed-->
+            <input type="checkbox" id="useType" onclick="handleClick(this)">
+            <select id="type">
+                <option value="adminDeed">Administrative Deed</option>
+                <option value="affidavit">Affidavit</option>
+                <option value="agreement">Agreement</option>
+                <option value="cemetery">Cemetery Certificate</option>
+                <option value="contract">Contract</option>
+                <option value="executor">Executor&#39;s Deed</option>
+                </option>
+            </select>
+            <br>
+
+            <!--search bar for sellers or buyers-->
+            <input type="checkbox" id="useName" onclick="handleClick(this)">
+            <input type="text" id="nameSearch" name="name" placeholder="Search">
+            <select id="grants">
+                <option id="grantor">Grantor (Seller)</option>
+                <option id="grantee">Grantee (Buyer)</option>
+            </select>
+            <br>
+
+            
+            <label>Search</label>
             <button onClick="searchQueryJS()"><img src="img/search.png" width="40px"></i></button>
           </div>
       </div>
      <!-- Slider -->
-
-   <link rel="stylesheet" href="rSlider.min.css">
-</head>
-<body>
-
-    <div class="container">
+     <div class="container">
         <div class="slider-container">
             <input type="text" id="slider" class="slider" />
         </div>
@@ -119,10 +141,9 @@
                     target: '#slider',
                     values: [1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010,2020],
                     range: true,
-                    set: [1930, 1960],
+                    set: [1900, 1960],
                     onChange: function (vals) {
-                        console.log(vals);
-                        searchQueryJS();
+                        dateSliderInport(vals);
                     }
                 });
             };
@@ -130,6 +151,8 @@
         })();
     </script>
     </div>
+
+   <link rel="stylesheet" href="rSlider.min.css">
     <br>
     <br>
       <!---displayed information after search-->
@@ -138,25 +161,28 @@
       <table class="table table-striped " id="resultsTable">
   <thead>
     <tr>
-      <th scope="col">Grantor</th>
-      <th scope="col">Grantee</th>
-      <th scope="col">Section</th>
-      <th scope="col">TSP</th>
-      <th scope="col">Range</th>
-      <th scope="col">Year</th>
+        <th scope="col">Deed Type</th>
+        <th scope="col">Grantor</th>
+        <th scope="col">Grantee</th>
+        <th scope="col">Section</th>
+        <th scope="col">TSP</th>
+        <th scope="col">Range</th>
+        <th scope="col">Year</th>
     </tr>
   </thead>
         
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -1323,9 +1349,8 @@
     </div>
 </footer>
 
-  
-  <script src="./JS/search.js"></script>
-  <script src="./JS/script.js"></script>
+      <script src="./JS/script.js"></script>
+      <script src="./JS/search.js"></script>
 
  <!-- Bootstrap javascript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

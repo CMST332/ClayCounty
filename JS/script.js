@@ -1,3 +1,7 @@
+    //global variable to search by township range and section formatted as such
+    //[township,range,section]
+    var locationSearch = [0,0,0];
+    
     document.getElementById("topo").style.display ="block";
 
     function map1(){
@@ -181,5 +185,8 @@
 
 
     function mapSearch(township, range, section){
-        console.log("Township: " + township + " Range: " + range + " Section: " + section)
+        // console.log("Township: " + township + " Range: " + range + " Section: " + section);
+        locationSearch[0] = township;
+        locationSearch[1] = range;
+        locationSearch[2] = section;
     }
