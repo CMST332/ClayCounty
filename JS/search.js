@@ -58,6 +58,22 @@ function autoSearch(){
 
 autoSearch();
 
+function searchMapFull(){
+    let responseCount = 0;
+    let responseQueue = [];
+    let township = locationSearch[0];
+    let range = locationSearch[1];
+    let section = locationSearch[2];
+    tableClear();
+
+    for(i = 0; i < queResponse.length; i++){
+        if(queResponse[i].TSP == township && queResponse[i].RGE == range && queResponse[i].SEC == section){
+            responseCount++
+            responseQueue[responseCount] = queResponse[i];
+            tableDisplay(responseQueue, responseCount)
+        }
+    }
+}
 
 function searchQueryJS(){
     autoSearch();
@@ -75,7 +91,6 @@ function searchQueryJS(){
     let range = locationSearch[1];
     let section = locationSearch[2];
     tableClear();
-    console.log(township + " " + range + " " + section);
 
     for(i = 0; i < queResponse.length; i++){
         if(testDates){
@@ -83,34 +98,96 @@ function searchQueryJS(){
                 if(queResponse[i].TYPE == testType){
                     if(enableName){
                         //undated, type, and name
-                        console.log("yep")
                         if(testGrant == "Grantor (Seller)"){
-                            console.log("yep seller")
-                            if(true){}
+                            if(queResponse[i].First_Name_Grantor_1 == testName || queResponse[i].Last_Name_Grantor_1 == testName){
+                                if(locationSearchUse){
+                                    if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                        responseCount++
+                                        responseQueue[responseCount] = queResponse[i];
+                                        tableDisplay(responseQueue, responseCount)
+                                    }
+                                }else{
+                                responseCount++
+                                responseQueue[responseCount] = queResponse[i];
+                                tableDisplay(responseQueue, responseCount)
+                                }
+                            }
                         }else{
-                            console.log("yep buyer")
+                            if(queResponse[i].First_Name_Grantee_1 == testName || queResponse[i].Last_Name_Grantee_1 == testName){
+                                if(locationSearchUse){
+                                    if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                        responseCount++
+                                        responseQueue[responseCount] = queResponse[i];
+                                        tableDisplay(responseQueue, responseCount)
+                                    }
+                                }else{
+                                responseCount++
+                                responseQueue[responseCount] = queResponse[i];
+                                tableDisplay(responseQueue, responseCount)
+                                }
+                            }
                         }
                     }else{
                         //undated, type, and no name
+
+                        if(locationSearchUse){
+                            if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                responseCount++
+                                responseQueue[responseCount] = queResponse[i];
+                                tableDisplay(responseQueue, responseCount)
+                            }
+                        }else{
                         responseCount++
                         responseQueue[responseCount] = queResponse[i];
                         tableDisplay(responseQueue, responseCount)
+                        }
                     }
                 }
             }else{
                 if(enableName){
                     //undated, no type, and name
-                    console.log("yep3")
                     if(testGrant == "Grantor (Seller)"){
-                        console.log("yep seller")
+                        if(queResponse[i].First_Name_Grantor_1 == testName || queResponse[i].Last_Name_Grantor_1 == testName){
+                            if(locationSearchUse){
+                                if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                    responseCount++
+                                    responseQueue[responseCount] = queResponse[i];
+                                    tableDisplay(responseQueue, responseCount)
+                                }
+                            }else{
+                            responseCount++
+                            responseQueue[responseCount] = queResponse[i];
+                            tableDisplay(responseQueue, responseCount)
+                            }
+                        }
                     }else{
-                        console.log("yep buyer")
+                        if(queResponse[i].First_Name_Grantee_1 == testName || queResponse[i].Last_Name_Grantee_1 == testName){
+                            if(locationSearchUse){
+                                if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                    responseCount++
+                                    responseQueue[responseCount] = queResponse[i];
+                                    tableDisplay(responseQueue, responseCount)
+                                }
+                            }else{
+                            responseCount++
+                            responseQueue[responseCount] = queResponse[i];
+                            tableDisplay(responseQueue, responseCount)
+                            }
+                        }
                     }
                 }else{
                     //undated, no type, and no name
+                    if(locationSearchUse){
+                        if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                            responseCount++
+                            responseQueue[responseCount] = queResponse[i];
+                            tableDisplay(responseQueue, responseCount)
+                        }
+                    }else{
                     responseCount++
                     responseQueue[responseCount] = queResponse[i];
                     tableDisplay(responseQueue, responseCount)
+                    }
                 }
             }
         }else{
@@ -121,33 +198,95 @@ function searchQueryJS(){
                         if(queResponse[i].TYPE == testType){
                             if(enableName){
                                 //dated, type, and name
-                                console.log("yep5")
                                 if(testGrant == "Grantor (Seller)"){
-                                    console.log("yep seller")
+                                    if(queResponse[i].First_Name_Grantor_1 == testName || queResponse[i].Last_Name_Grantor_1 == testName){
+                                        if(locationSearchUse){
+                                            if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                                responseCount++
+                                                responseQueue[responseCount] = queResponse[i];
+                                                tableDisplay(responseQueue, responseCount)
+                                            }
+                                        }else{
+                                        responseCount++
+                                        responseQueue[responseCount] = queResponse[i];
+                                        tableDisplay(responseQueue, responseCount)
+                                        }
+                                    }
                                 }else{
-                                    console.log("yep buyer")
+                                    if(queResponse[i].First_Name_Grantee_1 == testName || queResponse[i].Last_Name_Grantee_1 == testName){
+                                        if(locationSearchUse){
+                                            if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                                responseCount++
+                                                responseQueue[responseCount] = queResponse[i];
+                                                tableDisplay(responseQueue, responseCount)
+                                            }
+                                        }else{
+                                        responseCount++
+                                        responseQueue[responseCount] = queResponse[i];
+                                        tableDisplay(responseQueue, responseCount)
+                                        }
+                                    }
                                 }
                             }else{
                                 //dated, type, and no name
+                                if(locationSearchUse){
+                                    if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                        responseCount++
+                                        responseQueue[responseCount] = queResponse[i];
+                                        tableDisplay(responseQueue, responseCount)
+                                    }
+                                }else{
                                 responseCount++
                                 responseQueue[responseCount] = queResponse[i];
                                 tableDisplay(responseQueue, responseCount)
+                                }
                             }
                         }
                     }else{
                         if(enableName){
                             //dated, no type, and name
-                            console.log("yep7")
                             if(testGrant == "Grantor (Seller)"){
-                                console.log("yep seller")
+                                if(queResponse[i].First_Name_Grantor_1 == testName || queResponse[i].Last_Name_Grantor_1 == testName){
+                                    if(locationSearchUse){
+                                        if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                            responseCount++
+                                            responseQueue[responseCount] = queResponse[i];
+                                            tableDisplay(responseQueue, responseCount)
+                                        }
+                                    }else{
+                                    responseCount++
+                                    responseQueue[responseCount] = queResponse[i];
+                                    tableDisplay(responseQueue, responseCount)
+                                    }
+                                }
                             }else{
-                                console.log("yep buyer")
+                                if(queResponse[i].First_Name_Grantee_1 == testName || queResponse[i].Last_Name_Grantee_1 == testName){
+                                    if(locationSearchUse){
+                                        if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                            responseCount++
+                                            responseQueue[responseCount] = queResponse[i];
+                                            tableDisplay(responseQueue, responseCount)
+                                        }
+                                    }else{
+                                    responseCount++
+                                    responseQueue[responseCount] = queResponse[i];
+                                    tableDisplay(responseQueue, responseCount)
+                                    }
+                                }
                             }
                         }else{
                             //dated, no type, and no name
+                            if(locationSearchUse){
+                                if(queResponse[i].TSP == township && queResponse[i].RGE == range){
+                                    responseCount++
+                                    responseQueue[responseCount] = queResponse[i];
+                                    tableDisplay(responseQueue, responseCount)
+                                }
+                            }else{
                             responseCount++
                             responseQueue[responseCount] = queResponse[i];
                             tableDisplay(responseQueue, responseCount)
+                            }
                         }
                     }
                 }
@@ -156,6 +295,7 @@ function searchQueryJS(){
     }
 
 }
+
 function dateSliderImport(values){
     dates[0] = values[0]+values[1]+values[2]+values[3]+'-1-1';
     dates[1] = values[5]+values[6]+values[7]+values[8]+'-12-31';

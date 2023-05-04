@@ -1,6 +1,7 @@
     //global variable to search by township range and section formatted as such
     //[township,range,section]
     var locationSearch = [0,0,0];
+    var locationSearchUse = false;
     
     document.getElementById("topo").style.display ="block";
 
@@ -11,6 +12,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec1.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 6;
+        locationSearch[1] = 1;
+        searchQueryJS();
     }
 
     function map2(){
@@ -20,14 +26,25 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec2.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 6;
+        locationSearch[1] = 2;
+        searchQueryJS();
     }
 
     function map3(){
         const topo = document.getElementById("topo");
         const sec3 =document.getElementById("s3");
         const mBack = document.getElementById("mapBack");
+
         if(topo.style.display=="block"){
             topo.style.display ="none",sec3.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 6;
+        locationSearch[1] = 3;
+        searchQueryJS();
     }
 
     function map4(){
@@ -37,6 +54,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec4.style.display = "block",mBack.style.display = "block"}
+            
+        locationSearchUse = true;
+        locationSearch[0] = 6;
+        locationSearch[1] = 4;
+        searchQueryJS();
     }
 
     function map5(){
@@ -46,6 +68,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec5.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 7;
+        locationSearch[1] = 1;
+        searchQueryJS();
     }
 
     function map6(){
@@ -55,6 +82,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec6.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 7;
+        locationSearch[1] = 2;
+        searchQueryJS();
     }
 
     function map7(){
@@ -64,6 +96,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec7.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 7;
+        locationSearch[1] = 3;
+        searchQueryJS();
     }
 
     function map8(){
@@ -73,6 +110,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec8.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 7;
+        locationSearch[1] = 4;
+        searchQueryJS();
     }
 
     function map9(){
@@ -82,6 +124,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec9.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 8;
+        locationSearch[1] = 1;
+        searchQueryJS();
     }
 
     function map10(){
@@ -91,6 +138,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec10.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 8;
+        locationSearch[1] = 2;
+        searchQueryJS();
     }
 
     function map11(){
@@ -100,6 +152,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec11.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 8;
+        locationSearch[1] = 3;
+        searchQueryJS();
     }
 
     function map12(){
@@ -109,6 +166,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec12.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 8;
+        locationSearch[1] = 4;
+        searchQueryJS();
     }
 
     function map13(){
@@ -118,6 +180,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec13.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 9;
+        locationSearch[1] = 1;
+        searchQueryJS();
     }
 
     function map14(){
@@ -127,6 +194,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec14.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 9;
+        locationSearch[1] = 2;
+        searchQueryJS();
     }
 
     function map15(){
@@ -136,6 +208,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec15.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 9;
+        locationSearch[1] = 3;
+        searchQueryJS();
     }
 
     function map16(){
@@ -145,6 +222,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec16.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 9;
+        locationSearch[1] = 4;
+        searchQueryJS();
     }
 
     function map17(){
@@ -154,6 +236,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec17.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 10;
+        locationSearch[1] = 1;
+        searchQueryJS();
     }
 
     function map18(){
@@ -163,6 +250,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec18.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 10;
+        locationSearch[1] = 2;
+        searchQueryJS();
     }
 
     function map19(){
@@ -172,6 +264,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec19.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 10;
+        locationSearch[1] = 3;
+        searchQueryJS();
     }
 
     function map20(){
@@ -181,6 +278,11 @@
     
         if(topo.style.display=="block"){
             topo.style.display ="none",sec20.style.display = "block",mBack.style.display = "block"}
+
+        locationSearchUse = true;
+        locationSearch[0] = 10;
+        locationSearch[1] = 4;
+        searchQueryJS();
     }
 
 
@@ -189,5 +291,5 @@
         locationSearch[0] = township;
         locationSearch[1] = range;
         locationSearch[2] = section;
-        searchQueryJS();
+        searchMapFull();
     }
