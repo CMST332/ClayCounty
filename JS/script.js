@@ -189,4 +189,5 @@
         locationSearch[0] = township;
         locationSearch[1] = range;
         locationSearch[2] = section;
+        searchQueryJS();
     }

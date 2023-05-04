@@ -2,7 +2,8 @@
 // Variable to hold request
 var request;
 
-let queResponse = {};
+let dates = ['1900','2020'];
+let queResponse = [];
 let responseQueue = {};
 
 function editTable(response) { //Adds rows of data from the given array results
@@ -61,38 +62,104 @@ autoSearch();
 function searchQueryJS(){
     autoSearch();
     let responseCount = 0;
+    let responseQueue = [];
     let testDates = document.getElementById('dateLess').checked;
     let testType = document.getElementById('type').value;
-    let testName = document.getElementById('nameSearch').value;
+    let testName = document.getElementById('nameSearch').value.toUpperCase();
     let testGrant = document.getElementById('grants').value;
     let enableType = document.getElementById('useType').checked;
     let enableName = document.getElementById('useName').checked;
+    let lowerDate = dates[0];
+    let upperDate = dates[1];
     let township = locationSearch[0];
     let range = locationSearch[1];
     let section = locationSearch[2];
     tableClear();
-    if(testDates){
-        for(i = 0; i < queResponse.length; i++){
-            responseCount++
-            responseQueue[responseCount] = queResponse[i];
-            tableDisplay(responseQueue, responseCount)
-        }
-    }else{
-        for(i = 0; i < queResponse.length; i++){
+    console.log(township + " " + range + " " + section);
+
+    for(i = 0; i < queResponse.length; i++){
+        if(testDates){
+            if(enableType){
+                if(queResponse[i].TYPE == testType){
+                    if(enableName){
+                        //undated, type, and name
+                        console.log("yep")
+                        if(testGrant == "Grantor (Seller)"){
+                            console.log("yep seller")
+                            if(true){}
+                        }else{
+                            console.log("yep buyer")
+                        }
+                    }else{
+                        //undated, type, and no name
+                        responseCount++
+                        responseQueue[responseCount] = queResponse[i];
+                        tableDisplay(responseQueue, responseCount)
+                    }
+                }
+            }else{
+                if(enableName){
+                    //undated, no type, and name
+                    console.log("yep3")
+                    if(testGrant == "Grantor (Seller)"){
+                        console.log("yep seller")
+                    }else{
+                        console.log("yep buyer")
+                    }
+                }else{
+                    //undated, no type, and no name
+                    responseCount++
+                    responseQueue[responseCount] = queResponse[i];
+                    tableDisplay(responseQueue, responseCount)
+                }
+            }
+        }else{
+            //uses slider dates
             if(queResponse[i].DATE != null){
-                responseCount++
-                responseQueue[responseCount] = queResponse[i];
-                tableDisplay(responseQueue, responseCount)
-            }            
+                if(queResponse[i].DATE > lowerDate && queResponse[i].DATE < upperDate){
+                    if(enableType){
+                        if(queResponse[i].TYPE == testType){
+                            if(enableName){
+                                //dated, type, and name
+                                console.log("yep5")
+                                if(testGrant == "Grantor (Seller)"){
+                                    console.log("yep seller")
+                                }else{
+                                    console.log("yep buyer")
+                                }
+                            }else{
+                                //dated, type, and no name
+                                responseCount++
+                                responseQueue[responseCount] = queResponse[i];
+                                tableDisplay(responseQueue, responseCount)
+                            }
+                        }
+                    }else{
+                        if(enableName){
+                            //dated, no type, and name
+                            console.log("yep7")
+                            if(testGrant == "Grantor (Seller)"){
+                                console.log("yep seller")
+                            }else{
+                                console.log("yep buyer")
+                            }
+                        }else{
+                            //dated, no type, and no name
+                            responseCount++
+                            responseQueue[responseCount] = queResponse[i];
+                            tableDisplay(responseQueue, responseCount)
+                        }
+                    }
+                }
+            }
         }
     }
-    responseCount = 0;
-    console.log(enableType + " " + testType + " " + enableName + " " + testName + " " + testGrant)
-}
 
-function dateSliderInport(values){
+}
+function dateSliderImport(values){
+    dates[0] = values[0]+values[1]+values[2]+values[3]+'-1-1';
+    dates[1] = values[5]+values[6]+values[7]+values[8]+'-12-31';
     searchQueryJS();
-    console.log(values)
 }
 
 function tableDisplay(responseQueue, responseCount){

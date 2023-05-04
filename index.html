@@ -99,13 +99,18 @@
             <!--dropdown for type of landdeed-->
             <input type="checkbox" id="useType" onclick="handleClick(this)">
             <select id="type">
-                <option value="adminDeed">Administrative Deed</option>
-                <option value="affidavit">Affidavit</option>
-                <option value="agreement">Agreement</option>
-                <option value="cemetery">Cemetery Certificate</option>
-                <option value="contract">Contract</option>
-                <option value="executor">Executor&#39;s Deed</option>
-                </option>
+                <option value="Administrative Deed">Administrative Deed</option>
+                <option value="Affidavit">Affidavit</option>
+                <option value="Agreement">Agreement</option>
+                <option value="Cemetery">Cemetery Certificate</option>
+                <option value="Contact">Contract</option>
+                <option value="Executor's Deed">Executor&#39;s Deed</option>
+                <option value="Guardian Deed">Guardian Deed</option>
+                <option value="Lease">Lease</option>
+                <option value="Quit Claim Deed">Quit Claim Deed</option>
+                <option value="Sheriff's Deed">Sherriff&#39;s Deed</option>
+                <option value="trustee's Deed">Trustee&#39;s Deed</option>
+                <option value="Warranty Deed">Warranty Deed</option>
             </select>
             <br>
 
@@ -139,11 +144,12 @@
 
                 var slider = new rSlider({
                     target: '#slider',
-                    values: [1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010,2020],
+                    //set values for acceptable range before live demo
+                    values: [1900,1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912],
                     range: true,
-                    set: [1900, 1960],
+                    set: [1900, 1912],
                     onChange: function (vals) {
-                        dateSliderInport(vals);
+                        dateSliderImport(vals);
                     }
                 });
             };
