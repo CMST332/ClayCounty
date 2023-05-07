@@ -89,16 +89,18 @@
     <div class="search"> 
       
         <div class="text-center">
-            <h3>Search for records:</h3>
 
             <!--include entries without date information-->
+            <div>
             <input type="checkbox" id="dateLess" name="dateLess" value="TRUE">
-            <label>Include records without dates</label>
+            <label style="margin-right: 5px;">Include records without dates</label>
+            </div>
             <br>
 
             <!--dropdown for type of landdeed-->
+            <div>
             <input type="checkbox" id="useType" onclick="handleClick(this)">
-            <select id="type">
+            <select id="type" style="margin-right: 5px;">
                 <option value="Administrative Deed">Administrative Deed</option>
                 <option value="Affidavit">Affidavit</option>
                 <option value="Agreement">Agreement</option>
@@ -112,19 +114,20 @@
                 <option value="trustee's Deed">Trustee&#39;s Deed</option>
                 <option value="Warranty Deed">Warranty Deed</option>
             </select>
+            </div>
             <br>
 
             <!--search bar for sellers or buyers-->
+            <div>
             <input type="checkbox" id="useName" onclick="handleClick(this)">
             <input type="text" id="nameSearch" name="name" placeholder="Search">
             <select id="grants">
                 <option id="grantor">Grantor (Seller)</option>
                 <option id="grantee">Grantee (Buyer)</option>
             </select>
+            </div>
             <br>
 
-            
-            <label>Search</label>
             <button onClick="searchQueryJS()"><img src="img/search.png" width="40px"></i></button>
           </div>
       </div>

@@ -117,8 +117,10 @@ a.facebook {
 }
 
 .text-center{
-  padding-bottom: 2vw;
-  border-bottom: 2px solid #4b4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .table-responsive1{
